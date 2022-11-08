@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Gebruik (E) + (Rechts klikken) vo
 Cannot dig exchange shop: one or multiple stocks are in use.=Kan ruilwinkel niet graven: een of meer voorraden zijn in gebruik.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Ruilwinkel: Plaats uw handelsgoederen in 'Uitgaand'.
 
+Update shop=Update winkel
+Select item=Kies item
+No item selected=Geen item geselecteerd
+Clear=Duidelijk
+Save=Sla
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Een of meer uitwerpvelden zijn gevuld.
 Please empty them or contact the shop owner.=Leeg ze alsjeblieft of neem contact op met de eigenaar van de winkel.

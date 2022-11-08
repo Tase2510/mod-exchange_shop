@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Használja az (E) + (jobb klikk) 
 Cannot dig exchange shop: one or multiple stocks are in use.=Nem lehet kiásni a csereüzletet: egy vagy több készlet van használatban.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Cserebolt: Tegye be a kereskedelmi árut a "Kimenő" menüpontba.
 
+Update shop=Frissítés bolt
+Select item=Tétel kiválasztása
+No item selected=Nincs kiválasztott elem
+Clear=Tiszta
+Save=Mentés
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Egy vagy több kilövési mező van kitöltve.
 Please empty them or contact the shop owner.=Kérjük, ürítse ki őket, vagy lépjen kapcsolatba a bolt tulajdonosával.

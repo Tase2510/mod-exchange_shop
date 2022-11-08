@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Використовуйте (E) 
 Cannot dig exchange shop: one or multiple stocks are in use.=Неможливо викопати Обмінний Магазин: використовується один або кілька осередків.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Обмінний Магазин: Вставте свої торгові товари в 'Вихідні'.
 
+Update shop=Оновити магазин
+Select item=Виберіть пункт
+No item selected=Не вибрано жодного пункту
+Clear=Чисто
+Save=Зберегти
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Один або кілька полів викиду заповнені.
 Please empty them or contact the shop owner.=Будь ласка, спустошіть їх або зв'яжіться із власником магазину.

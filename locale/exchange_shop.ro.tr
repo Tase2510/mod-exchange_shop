@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Utilizați (E) + (clic dreapta) p
 Cannot dig exchange shop: one or multiple stocks are in use.=Nu se poate săpa magazinul de schimb: unul sau mai multe stocuri sunt în curs de utilizare.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Magazin de schimb: Introduceți mărfurile de schimb în "Ieșire".
 
+Update shop=Actualizare magazin
+Select item=Selectați elementul
+No item selected=Niciun element selectat
+Clear=Clar
+Save=Salvați
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Se completează unul sau mai multe câmpuri de ejecție.
 Please empty them or contact the shop owner.=Vă rugăm să le goliți sau să contactați proprietarul magazinului.

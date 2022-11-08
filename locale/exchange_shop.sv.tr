@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Använd (E) + (högerklick) för 
 Cannot dig exchange shop: one or multiple stocks are in use.=Kan inte gräva en bytesbutik: ett eller flera lager är i bruk.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Bytesbutik: Sätt in dina handelsvaror i "Outgoing".
 
+Update shop=Uppdatera butiken
+Select item=Välj objekt
+No item selected=Inget objekt valts
+Clear=Klart
+Save=Spara
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Ett eller flera utkastningsfält är fyllda.
 Please empty them or contact the shop owner.=Töm dem eller kontakta butiksägaren.

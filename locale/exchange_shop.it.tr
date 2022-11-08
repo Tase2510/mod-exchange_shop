@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Utilizzare (E) + (clic destro) pe
 Cannot dig exchange shop: one or multiple stocks are in use.=Impossibile scavare il negozio di scambio: uno o più stock sono in uso.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Negozio di scambio: Inserire le merci di scambio in "Uscita".
 
+Update shop=Aggiornamento negozio
+Select item=Selezionare l'articolo
+No item selected=Nessuna voce selezionata
+Clear=Libero
+Save=Risparmiare
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Vengono riempiti uno o più campi di espulsione.
 Please empty them or contact the shop owner.=Si prega di svuotarli o di contattare il proprietario del negozio.

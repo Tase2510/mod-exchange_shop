@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Brug (E) + (Højreklik) til kunde
 Cannot dig exchange shop: one or multiple stocks are in use.=Kan ikke åbne en byttebutik: en eller flere lagre er i brug.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Byttebutik: Indsæt dine byttevarer i "Udgående".
 
+Update shop=Opdater butik
+Select item=Vælg emne
+No item selected=Ingen vare valgt
+Clear=Klar
+Save=Gem
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Et eller flere udsmidningsfelter er udfyldt.
 Please empty them or contact the shop owner.=Tøm dem venligst eller kontakt butiksejeren.

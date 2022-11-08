@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Použijte (E) + (pravé tlačítk
 Cannot dig exchange shop: one or multiple stocks are in use.=Nelze vykopat směnárnu: používá se jedna nebo více zásob.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Výměnný obchod: Vložte své obchodní zboží do položky "Odchozí".
 
+Update shop=Aktualizace obchodu
+Select item=Vyberte položku
+No item selected=Není vybrána žádná položka
+Clear=Přehledně
+Save=Uložit
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Je vyplněno jedno nebo více polí pro vysunutí.
 Please empty them or contact the shop owner.=Vyprázdněte je nebo kontaktujte majitele obchodu.

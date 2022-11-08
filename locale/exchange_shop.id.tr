@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Gunakan (E) + (Klik kanan) untuk 
 Cannot dig exchange shop: one or multiple stocks are in use.=Tidak bisa menggali toko pertukaran: satu atau beberapa stok sedang digunakan.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Tukar toko: Masukkan barang dagangan Anda ke dalam 'Outgoing'.
 
+Update shop=Perbarui toko
+Select item=Pilih item
+No item selected=Tidak ada item yang dipilih
+Clear=Bersih
+Save=Simpan
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Satu atau beberapa bidang ejeksi diisi.
 Please empty them or contact the shop owner.=Silakan kosongkan atau hubungi pemilik toko.

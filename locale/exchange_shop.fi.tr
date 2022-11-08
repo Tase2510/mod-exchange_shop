@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Käytä (E) + (hiiren kakkospaini
 Cannot dig exchange shop: one or multiple stocks are in use.=Ei voi kaivaa vaihtokauppaa: yksi tai useampi varasto on käytössä.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Vaihtokauppa: Aseta kauppatavarasi kohtaan 'Lähtevät'.
 
+Update shop=Päivityskauppa
+Select item=Valitse kohde
+No item selected=Ei valittua kohdetta
+Clear=Kirkas
+Save=Tallenna
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Yksi tai useampi heittokenttä on täytetty.
 Please empty them or contact the shop owner.=Tyhjennä ne tai ota yhteyttä kaupan omistajaan.

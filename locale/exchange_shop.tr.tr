@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Müşteri arayüzü için (E) + (
 Cannot dig exchange shop: one or multiple stocks are in use.=Değişim mağazası kazılamıyor: bir veya birden fazla stok kullanımda.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Takas dükkanı: Ticaret mallarınızı 'Giden' kısmına yerleştirin.
 
+Update shop=Mağazayı güncelle
+Select item=Öğeyi seçin
+No item selected=Seçili öğe yok
+Clear=Temiz
+Save=Kaydet
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Bir veya birden fazla fırlatma alanı doldurulur.
 Please empty them or contact the shop owner.=Lütfen bunları boşaltın veya mağaza sahibiyle iletişime geçin.

@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=カスタマーインターフェ
 Cannot dig exchange shop: one or multiple stocks are in use.=交換ショップを掘ることができない：1つまたは複数のストックが使用中である。
 Exchange shop: Insert your trade goods into 'Outgoing'.=交換ショップです。交易品を「出庫」に入れる。
 
+Update shop=アップデートショップ
+Select item=項目を選択
+No item selected=選択されている項目がない
+Clear=クリア
+Save=保存
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=1つまたは複数の排出フィールドが埋まっている。
 Please empty them or contact the shop owner.=空けていただくか、店主までご連絡ください。

@@ -19,6 +19,12 @@ Use (E) + (Right click) for customer interface=Χρησιμοποιήστε (E) 
 Cannot dig exchange shop: one or multiple stocks are in use.=Δεν μπορεί να σκάψει κατάστημα ανταλλαγής: ένα ή περισσότερα αποθέματα είναι σε χρήση.
 Exchange shop: Insert your trade goods into 'Outgoing'.=Κατάστημα ανταλλαγής: Εισάγετε τα εμπορεύματά σας στο 'Εξερχόμενο'.
 
+Update shop=Ενημέρωση καταστήματος
+Select item=Επιλέξτε στοιχείο
+No item selected=Δεν έχει επιλεγεί κανένα στοιχείο
+Clear=Σαφής
+Save=Αποθήκευση
+
 # shop_functions.lua
 One or multiple ejection fields are filled.=Συμπληρώνονται ένα ή περισσότερα πεδία εκτίναξης.
 Please empty them or contact the shop owner.=Παρακαλούμε αδειάστε τα ή επικοινωνήστε με τον ιδιοκτήτη του καταστήματος.
