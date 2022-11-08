@@ -1,7 +1,7 @@
 --[[
 	Exchange Shop
 
-This code is based on the idea of Dan Duncombe's exchange shop
+	This code is based on the idea of Dan Duncombe's exchange shop
 	https://web.archive.org/web/20160403113102/https://forum.minetest.net/viewtopic.php?id=7002
 ]]
 
@@ -410,7 +410,8 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 		local shop_inv = meta:get_inventory()
 		local pinv = sender:get_inventory()
 		for _, listname in ipairs({"cust_ow", "cust_og"}) do
-			for _, stack in ipairs(shop_inv:get_list(listname)) do
+			local list = shop_inv:get_list(listname) or {}
+			for _, stack in ipairs(list) do
 				local leftover = pinv:add_item("main", stack)
 				if not leftover:is_empty() then
 					minetest.add_item(sender:get_pos(), leftover)
