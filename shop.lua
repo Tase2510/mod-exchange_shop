@@ -445,6 +445,7 @@ minetest.register_node(exchange_shop.shopname, {
 
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
+		meta:set_string("item_picker", "true")
 		local inv = meta:get_inventory()
 		inv:set_size("stock", exchange_shop.storage_size) -- needed stock for exchanges
 		inv:set_size("custm", exchange_shop.storage_size) -- stock of the customers exchanges
