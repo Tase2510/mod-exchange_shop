@@ -483,7 +483,7 @@ minetest.register_node(exchange_shop.shopname, {
 			get_exchange_shop_formspec(mode, pos, meta))
 	end,
 
-	allow_metadata_inventory_move = function(pos, from_list, to_list, _, _, count, player)
+	allow_metadata_inventory_move = function(pos, from_list, _, to_list, _, count, player)
 		if from_list:sub(1, 6) == "cust_o" or to_list:sub(1, 6) == "cust_o" then
 			return 0
 		end
