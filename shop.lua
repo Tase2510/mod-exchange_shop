@@ -441,15 +441,11 @@ minetest.register_node(exchange_shop.shopname, {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2},
 	sounds = default.node_sound_wood_defaults(),
 
-	after_place_node = function(pos, placer)
-		local meta = minetest.get_meta(pos)
-		meta:set_string("infotext", S("Exchange Shop"))
-	end,
-
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
-		meta:set_string("item_picker", "true")
 		local inv = meta:get_inventory()
+		meta:set_string("infotext", S("Exchange Shop"))
+		meta:set_string("item_picker", "true")
 		inv:set_size("stock", exchange_shop.storage_size) -- needed stock for exchanges
 		inv:set_size("custm", exchange_shop.storage_size) -- stock of the customers exchanges
 		inv:set_size("custm_ej", 4) -- ejected items if shop has no inventory room
