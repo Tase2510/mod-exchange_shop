@@ -370,7 +370,7 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 		-- Throw error message
 		if err_msg then
 			minetest.chat_send_player(player_name, minetest.colorize("#F33",
-				S("Exchange Shop:") .. " " .. err_msg))
+				S("Exchange Shop") .. ": " .. err_msg))
 		end
 		if resend then
 			minetest.show_formspec(player_name, "exchange_shop:shop_formspec",
@@ -422,6 +422,9 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 		-- Mark the shop as upgraded
 		meta:set_string("item_picker", "true")
 
+		-- Remove owner name
+		meta:set_string("infotext", S("Exchange Shop"))
+
 		minetest.show_formspec(player_name, "exchange_shop:shop_formspec",
 			get_exchange_shop_formspec("owner_custm", pos, meta))
 	end
@@ -440,8 +443,7 @@ minetest.register_node(exchange_shop.shopname, {
 
 	after_place_node = function(pos, placer)
 		local meta = minetest.get_meta(pos)
-		local owner = placer:get_player_name()
-		meta:set_string("infotext", S("Exchange Shop") .. "\n" .. S("Owned by @1", owner))
+		meta:set_string("infotext", S("Exchange Shop"))
 	end,
 
 	on_construct = function(pos)
@@ -459,9 +461,9 @@ minetest.register_node(exchange_shop.shopname, {
 		local meta = minetest.get_meta(pos)
 		local inv = meta:get_inventory()
 
-		if inv:is_empty("stock") and inv:is_empty("custm")
-				and inv:is_empty("cust_ow") and inv:is_empty("custm_ej")
-				and inv:is_empty("cust_og") then
+		if inv:is_empty("stock") and inv:is_empty("custm") and inv:is_empty("custm_ej") and
+				(meta:get_string("item_picker") or
+				(inv:is_empty("cust_ow") and inv:is_empty("cust_og"))) then
 			return true
 		end
 		if player then
@@ -499,7 +501,7 @@ minetest.register_node(exchange_shop.shopname, {
 
 		if listname == "custm" then
 			minetest.chat_send_player(player_name,
-				S("Exchange shop: Insert your trade goods into 'Outgoing'."))
+				S("Exchange shop: Insert your trade goods into \"Outgoing\"."))
 			return 0
 		end
 		if not minetest.is_protected(pos, player_name)

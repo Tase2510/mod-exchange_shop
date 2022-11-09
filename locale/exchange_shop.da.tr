@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Byttebutik
-Exchange Shop:=Byttebutik:
-Exchange Shop: "@1"=Byttebutik: "@1"
-Owned by @1=Ejet af @1
 
 Current stock:=Nuværende lager:
 You need:=Det skal du bruge:
@@ -17,7 +14,7 @@ Outgoing=Udgående
 Use (E) + (Right click) for customer interface=Brug (E) + (Højreklik) til kundegrænseflade
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Kan ikke åbne en byttebutik: en eller flere lagre er i brug.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Byttebutik: Indsæt dine byttevarer i "Udgående".
+Exchange shop: Insert your trade goods into "Outgoing".=Byttebutik: Indsæt dine byttevarer i "Udgående".
 
 Update shop=Opdater butik
 Select item=Vælg emne

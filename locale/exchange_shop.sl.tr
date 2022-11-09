@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Trgovina Exchange Shop
-Exchange Shop:=Izmenjevalnica:
-Exchange Shop: "@1"=Trgovina z menjalnicami: "@1"
-Owned by @1=V lasti @1
 
 Current stock:=Trenutna zaloga:
 You need:=Potrebujete:
@@ -17,7 +14,7 @@ Outgoing=Odhajajoči
 Use (E) + (Right click) for customer interface=Uporabite (E) + (desni klik) za uporabniški vmesnik
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Ni mogoče izkopati menjalnice: v uporabi je ena ali več zalog.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Menjalnica: Vstavite svoje trgovsko blago v "Odhodno".
+Exchange shop: Insert your trade goods into "Outgoing".=Menjalnica: Vstavite svoje trgovsko blago v "Odhodno".
 
 Update shop=Posodobitev trgovine
 Select item=Izberite element

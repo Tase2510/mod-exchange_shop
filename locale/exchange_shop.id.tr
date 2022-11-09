@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Toko Pertukaran
-Exchange Shop:=Toko Pertukaran:
-Exchange Shop: "@1"=Toko Pertukaran: "@1"
-Owned by @1=Dimiliki oleh @1
 
 Current stock:=Stok saat ini:
 You need:=Anda perlu:
@@ -17,7 +14,7 @@ Outgoing=Keluar
 Use (E) + (Right click) for customer interface=Gunakan (E) + (Klik kanan) untuk antarmuka pelanggan
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Tidak bisa menggali toko pertukaran: satu atau beberapa stok sedang digunakan.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Tukar toko: Masukkan barang dagangan Anda ke dalam 'Outgoing'.
+Exchange shop: Insert your trade goods into "Outgoing".=Toko pertukaran: Masukkan barang dagangan Anda ke dalam "Outgoing".
 
 Update shop=Perbarui toko
 Select item=Pilih item

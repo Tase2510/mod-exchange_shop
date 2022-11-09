@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Магазин за обмен
-Exchange Shop:=Магазин за обмен:
-Exchange Shop: "@1"=Магазин за обмен: "@1"
-Owned by @1=Собственост на @1
 
 Current stock:=Текуща наличност:
 You need:=Имате нужда от:
@@ -17,7 +14,7 @@ Outgoing=Изходящ
 Use (E) + (Right click) for customer interface=Използвайте (E) + (щракване с десния бутон на мишката) за клиентски интерфейс
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Не може да се изкопае магазин за обмен: използват се един или няколко склада.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Магазин за обмяна на валута: Въведете търговските си стоки в "Изходящи".
+Exchange shop: Insert your trade goods into "Outgoing".=Магазин за обмяна на валута: Поставете търговските си стоки в "Изходящи".
 
 Update shop=Магазин за актуализация
 Select item=Изберете елемент

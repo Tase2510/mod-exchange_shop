@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Ruilwinkel
-Exchange Shop:=Ruilwinkel:
-Exchange Shop: "@1"=Ruilwinkel: "@1"
-Owned by @1=Eigendom van @1
 
 Current stock:=Huidige voorraad:
 You need:=Je hebt het nodig:
@@ -17,7 +14,7 @@ Outgoing=Uitgaand
 Use (E) + (Right click) for customer interface=Gebruik (E) + (Rechts klikken) voor klanteninterface
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Kan ruilwinkel niet graven: een of meer voorraden zijn in gebruik.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Ruilwinkel: Plaats uw handelsgoederen in 'Uitgaand'.
+Exchange shop: Insert your trade goods into "Outgoing".=Ruilwinkel: Plaats uw handelsgoederen in "Uitgaande".
 
 Update shop=Update winkel
 Select item=Kies item

@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Magazin de schimb valutar
-Exchange Shop:=Magazin de schimb:
-Exchange Shop: "@1"=Magazin de schimb: "@1"
-Owned by @1=Deținută de @1
 
 Current stock:=Stoc curent:
 You need:=Aveți nevoie de:
@@ -17,7 +14,7 @@ Outgoing=Ieșire
 Use (E) + (Right click) for customer interface=Utilizați (E) + (clic dreapta) pentru interfața cu clientul
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Nu se poate săpa magazinul de schimb: unul sau mai multe stocuri sunt în curs de utilizare.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Magazin de schimb: Introduceți mărfurile de schimb în "Ieșire".
+Exchange shop: Insert your trade goods into "Outgoing".=Magazin de schimb: Introduceți mărfurile de schimb în "Ieșire".
 
 Update shop=Actualizare magazin
 Select item=Selectați elementul

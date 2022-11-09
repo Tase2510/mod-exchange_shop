@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Обмінний Магазин
-Exchange Shop:=Обмінний Магазин:
-Exchange Shop: "@1"=Обмінний Магазин: "@1"
-Owned by @1=Власник: @1
 
 Current stock:=Склад:
 You need:=Вам потрібно:
@@ -17,7 +14,7 @@ Outgoing=Продається
 Use (E) + (Right click) for customer interface=Використовуйте (E) + (клацання правою кнопкою миші) для інтерфейсу клієнта
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Неможливо викопати Обмінний Магазин: використовується один або кілька осередків.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Обмінний Магазин: Вставте свої торгові товари в 'Вихідні'.
+Exchange shop: Insert your trade goods into "Outgoing".=Обмінний пункт: Вставте свої торгові товари в "Продається".
 
 Update shop=Оновити магазин
 Select item=Виберіть пункт

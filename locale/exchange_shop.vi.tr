@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Cửa hàng trao đổi
-Exchange Shop:=Cửa hàng trao đổi:
-Exchange Shop: "@1"=Cửa hàng trao đổi: "@1"
-Owned by @1=Chủ sở hữu: @1
 
 Current stock:=Thành phần:
 You need:=Bạn cần:
@@ -17,7 +14,7 @@ Outgoing=Đã bán
 Use (E) + (Right click) for customer interface=Sử dụng (E) + (nhấp chuột phải) cho giao diện máy khách
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Không thể đào Cửa hàng trao đổi: một hoặc nhiều ô được sử dụng.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Cửa hàng trao đổi: Dán các thương phẩm của bạn vào 'Hộp thư đi'.
+Exchange shop: Insert your trade goods into "Outgoing".=Cửa hàng trao đổi: Đưa các mặt hàng thương mại của bạn vào "Có thể bán".
 
 Update shop=Cập nhật cửa hàng
 Select item=Chọn một mục

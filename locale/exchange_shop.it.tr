@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Negozio di scambio
-Exchange Shop:=Negozio di scambio:
-Exchange Shop: "@1"=Negozio di scambio: "@1"
-Owned by @1=Di proprietà di @1
 
 Current stock:=Stock attuale:
 You need:=È necessario:
@@ -17,7 +14,7 @@ Outgoing=In uscita
 Use (E) + (Right click) for customer interface=Utilizzare (E) + (clic destro) per l'interfaccia del cliente
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Impossibile scavare il negozio di scambio: uno o più stock sono in uso.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Negozio di scambio: Inserire le merci di scambio in "Uscita".
+Exchange shop: Insert your trade goods into "Outgoing".=Negozio di scambio: Inserire le merci commerciali in "Uscita".
 
 Update shop=Aggiornamento negozio
 Select item=Selezionare l'articolo

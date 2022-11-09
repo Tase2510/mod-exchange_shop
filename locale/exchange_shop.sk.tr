@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Výmena tovaru
-Exchange Shop:=Výmena tovaru:
-Exchange Shop: "@1"=Výmena tovaru: "@1"
-Owned by @1=Vo vlastníctve @1
 
 Current stock:=Aktuálne zásoby:
 You need:=Potrebujete:
@@ -17,7 +14,7 @@ Outgoing=Odchádzajúci
 Use (E) + (Right click) for customer interface=Použite (E) + (pravé tlačidlo myši) pre zákaznícke rozhranie
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Nemožno vykopať výmenný obchod: používa sa jedna alebo viacero zásob.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Výmena tovaru: Vložte svoj obchodný tovar do položky "Odchádzajúci".
+Exchange shop: Insert your trade goods into "Outgoing".=Výmena tovaru: Vložte svoj obchodný tovar do položky "Odchádzajúci".
 
 Update shop=Aktualizácia obchodu
 Select item=Vyberte položku
