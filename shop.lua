@@ -301,7 +301,7 @@ local item_picker = flow.make_gui(function(player, ctx)
 			},
 		},
 		gui.HBox{
-			gui.Field{name = "amount", label = S("Amount"), default = "1"},
+			gui.Field{name = "amount", label = S("Amount:"), default = "1"},
 			gui.HBox{
 				expand = true, align_h = "end", align_v = "end",
 				gui.Button{

@@ -19,6 +19,7 @@ Exchange shop: Insert your trade goods into "Outgoing".=交換ショップです
 Update shop=アップデートショップ
 Select item=項目を選択
 No item selected=選択されている項目がない
+Amount:=金額です。
 Clear=クリア
 Save=保存
 
