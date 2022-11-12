@@ -25,7 +25,7 @@ Save=Tallenna
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Yksi tai useampi heittokenttä on täytetty.
-Please empty them or contact the shop owner.=Tyhjennä ne tai ota yhteyttä kaupan omistajaan.
+Please empty them or contact the shop owner.=Tyhjennä ne tai ota yhteyttä liikkeen omistajaan.
 The field '@1' can not contain multiple times the same items.=Kenttä '@1' ei voi sisältää useita kertoja samoja kohteita.
 Please contact the shop owner.=Ota yhteyttä myymälän omistajaan.
 The stock in this shop is full.=Kaupan varastot ovat täynnä.

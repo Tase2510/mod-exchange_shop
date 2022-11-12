@@ -3,11 +3,11 @@
 # shop.lua
 Exchange Shop=Sklep wymiany
 
-Current stock:=Aktualny stan magazynowy:
-You need:=Potrzebne są:
-You give:=Ty dajesz:
-Exchange=Wymiana
-You get:=Otrzymasz:
+Current stock:=Aktualne zapasy:
+You need:=Potrzebujesz:
+You give:=Dajesz:
+Exchange=Giełda
+You get:=Otrzymujesz:
 Income=Dochód
 Outgoing=Wychodzące
 

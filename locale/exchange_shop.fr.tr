@@ -3,12 +3,12 @@
 # shop.lua
 Exchange Shop=Boutique d'échange
 
-Current stock:=Stock affiché :
-You need:=Vous avez besoin de
+Current stock:=Stock actuel :
+You need:=Vous avez besoin :
 You give:=Vous donnez :
-Exchange=Échanger
-You get:=Vous recevez :
-Income=Entrée
+Exchange=Exchange
+You get:=Vous obtenez :
+Income=Revenu
 Outgoing=Sortie
 
 Use (E) + (Right click) for customer interface=Utiliser (E) + (clic droit) pour l'interface client
