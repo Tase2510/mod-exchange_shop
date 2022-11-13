@@ -520,9 +520,9 @@ minetest.register_node(exchange_shop.shopname, {
 minetest.register_craft({
 	output = exchange_shop.shopname,
 	recipe = {
-		{"default:gold_ingot", "default:ruby", "default:gold_ingot"},
-		{"default:ruby", "default:chest", "default:ruby"},
-		{"default:gold_ingot", "default:ruby", "default:gold_ingot"}
+		{"", "default:ruby", ""},
+		{"default:gold_ingot", "default:chest", "default:gold_ingot"},
+		{"", "default:gold_ingot", ""}
 	}
 })
 
