@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Maiņas veikals
-Exchange Shop:=Maiņas veikals:
-Exchange Shop: "@1"=Maiņas veikals: "@1"
-Owned by @1=pieder @1
 
 Current stock:=Pašreizējais krājums:
 You need:=Jums ir nepieciešams:
@@ -17,7 +14,14 @@ Outgoing=izejošais
 Use (E) + (Right click) for customer interface=Izmantojiet (E) + (klikšķiniet ar peles labo pogu), lai izveidotu klienta saskarni
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Nevar izrakt maiņas veikalu: tiek izmantots viens vai vairāki krājumi.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Maiņas veikals: Ievietojiet savas tirdzniecības preces sadaļā "Izejošās".
+Exchange shop: Insert your trade goods into "Outgoing".=Maiņas veikals: Ievietojiet savas tirdzniecības preces sadaļā "Izejošās".
+
+Update shop=Atjaunināt veikalu
+Select item=Izvēlēties objektu
+No item selected=Nav izvēlēta neviena vienība
+Amount:=Summa:
+Clear=Skaidrs
+Save=Saglabāt
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Ir aizpildīts viens vai vairāki izmešanas lauki.

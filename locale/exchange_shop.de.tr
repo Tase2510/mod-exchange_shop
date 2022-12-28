@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Tauschbörse
-Exchange Shop:=Tauschbörse:
-Exchange Shop: "@1"=Shop umtauschen: "@1"
-Owned by @1=Im Besitz von @1
 
 Current stock:=Aktueller Bestand:
 You need:=Sie benötigen:
@@ -17,7 +14,14 @@ Outgoing=Ausgehend von
 Use (E) + (Right click) for customer interface=Verwenden Sie (E) + (Rechtsklick) für die Kundenschnittstelle
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Tauschbörse kann nicht gegraben werden: ein oder mehrere Bestände sind in Gebrauch.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Tauschbörse: Legen Sie Ihre Handelswaren in "Ausgehend" ein.
+Exchange shop: Insert your trade goods into "Outgoing".=Tauschbörse: Legen Sie Ihre Handelswaren in "Ausgehend" ein.
+
+Update shop=Shop aktualisieren
+Select item=Artikel auswählen
+No item selected=Kein Element ausgewählt
+Amount:=Betrag:
+Clear=Klar
+Save=Speichern Sie
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Ein oder mehrere Auswurffelder sind gefüllt.

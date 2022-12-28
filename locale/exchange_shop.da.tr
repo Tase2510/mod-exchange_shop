@@ -2,12 +2,9 @@
 
 # shop.lua
 Exchange Shop=Byttebutik
-Exchange Shop:=Byttebutik:
-Exchange Shop: "@1"=Byttebutik: "@1"
-Owned by @1=Ejet af @1
 
 Current stock:=Nuværende lager:
-You need:=Det skal du bruge:
+You need:=Du skal bruge:
 You give:=Du giver:
 Exchange=Udveksling
 You get:=Du får:
@@ -17,7 +14,14 @@ Outgoing=Udgående
 Use (E) + (Right click) for customer interface=Brug (E) + (Højreklik) til kundegrænseflade
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Kan ikke åbne en byttebutik: en eller flere lagre er i brug.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Byttebutik: Indsæt dine byttevarer i "Udgående".
+Exchange shop: Insert your trade goods into "Outgoing".=Byttebutik: Indsæt dine byttevarer i "Udgående".
+
+Update shop=Opdater butik
+Select item=Vælg emne
+No item selected=Ingen vare valgt
+Amount:=Beløb:
+Clear=Klar
+Save=Gem
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Et eller flere udsmidningsfelter er udfyldt.

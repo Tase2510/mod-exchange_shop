@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=交換ショップ
-Exchange Shop:=交換ショップです。
-Exchange Shop: "@1"=交換ショップです。"@1"
-Owned by @1=所有者：@1
 
 Current stock:=現在の在庫です。
 You need:=必要です。
@@ -17,7 +14,14 @@ Outgoing=アウトゴーイング
 Use (E) + (Right click) for customer interface=カスタマーインターフェースの場合、(E)+(右クリック)を使用します。
 
 Cannot dig exchange shop: one or multiple stocks are in use.=交換ショップを掘ることができない：1つまたは複数のストックが使用中である。
-Exchange shop: Insert your trade goods into 'Outgoing'.=交換ショップです。交易品を「出庫」に入れる。
+Exchange shop: Insert your trade goods into "Outgoing".=交換ショップです。交易品を「出庫」に入れる。
+
+Update shop=アップデートショップ
+Select item=項目を選択
+No item selected=選択されている項目がない
+Amount:=金額です。
+Clear=クリア
+Save=保存
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=1つまたは複数の排出フィールドが埋まっている。

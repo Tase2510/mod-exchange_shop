@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Обменный Магазин
-Exchange Shop:=Обменный Магазин:
-Exchange Shop: "@1"=Обменный Магазин: "@1"
-Owned by @1=Владелец: @1
 
 Current stock:=Склад:
 You need:=Вам нужно:
@@ -17,7 +14,14 @@ Outgoing=Продаваемое
 Use (E) + (Right click) for customer interface=Используйте (E) + (щелчок правой кнопкой мыши) для интерфейса клиента
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Невозможно выкопать Обменный Магазин: используется одна или несколько ячеек.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Обменный Магазин: Вставьте свои торговые товары в 'Исходящие'.
+Exchange shop: Insert your trade goods into "Outgoing".=Обменный Магазин: Вставьте свои торговые товары в "Продаваемое".
+
+Update shop=Обновить магазин
+Select item=Выберите предмет
+No item selected=Нет выбранных предметов
+Amount:=Количество:
+Clear=Очистить
+Save=Сохранить
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Одно или несколько полей выброса заполнены.

@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Mainų parduotuvė
-Exchange Shop:=Mainų parduotuvė:
-Exchange Shop: "@1"=Mainų parduotuvė: "@1"
-Owned by @1=Priklauso @1
 
 Current stock:=Dabartinės atsargos:
 You need:=Jums reikia:
@@ -17,7 +14,14 @@ Outgoing=Išeinantis
 Use (E) + (Right click) for customer interface=Naudokite (E) + (dešiniuoju pelės mygtuku spustelėkite) klientų sąsajai
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Negalima iškasti mainų parduotuvės: naudojama viena arba kelios atsargos.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Mainų parduotuvė: Į "Išeinančias" įkelkite savo prekybos prekes.
+Exchange shop: Insert your trade goods into "Outgoing".=Mainų parduotuvė: Į "Išeinančias" įkelkite savo prekybos prekes.
+
+Update shop=Atnaujinti parduotuvę
+Select item=Pasirinkite elementą
+No item selected=Nėra pasirinkto elemento
+Amount:=Suma:
+Clear=Skaidrus
+Save=Išsaugoti
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Užpildomas vienas arba keli išmetimo laukai.

@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Vahetuspood
-Exchange Shop:=Vahetuspood:
-Exchange Shop: "@1"=Vahetuspood: "@1"
-Owned by @1=Omanik @1
 
 Current stock:=Praegune varu:
 You need:=Sa pead:
@@ -17,7 +14,14 @@ Outgoing=Väljaminev
 Use (E) + (Right click) for customer interface=Kasutage (E) + (paremklõps) kliendi kasutajaliidese jaoks
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Ei saa kaevata vahetuspoodi: üks või mitu varu on kasutusel.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Vahetuspood: Sisestage oma kauplemiskaubad "Väljaminevale".
+Exchange shop: Insert your trade goods into "Outgoing".=Vahetuspood: Sisestage oma kauplemiskaubad "Väljaminevale".
+
+Update shop=Uuenda poodi
+Select item=Valige toode
+No item selected=Ei ole valitud
+Amount:=Summa:
+Clear=Selge
+Save=Salvesta
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Täidetud on üks või mitu väljaviskevälja.

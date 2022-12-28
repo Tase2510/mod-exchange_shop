@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Exchange Shop
-Exchange Shop:=Cserebolt:
-Exchange Shop: "@1"=Cserebolt: "@1"
-Owned by @1=Tulajdonos @1
 
 Current stock:=Jelenlegi készlet:
 You need:=Szükséged van rá:
@@ -17,7 +14,14 @@ Outgoing=Kimenő
 Use (E) + (Right click) for customer interface=Használja az (E) + (jobb klikk) gombot az ügyfélfelülethez.
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Nem lehet kiásni a csereüzletet: egy vagy több készlet van használatban.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Cserebolt: Tegye be a kereskedelmi árut a "Kimenő" menüpontba.
+Exchange shop: Insert your trade goods into "Outgoing".=Cserebolt: Tegye be a kereskedelmi árut a "Kimenő" menüpontba.
+
+Update shop=Frissítés bolt
+Select item=Tétel kiválasztása
+No item selected=Nincs kiválasztott elem
+Amount:=Összeg:
+Clear=Tiszta
+Save=Mentés
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Egy vagy több kilövési mező van kitöltve.

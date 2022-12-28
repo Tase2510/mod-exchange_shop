@@ -2,9 +2,6 @@
 
 # shop.lua
 Exchange Shop=Loja de troca
-Exchange Shop:=Loja de troca:
-Exchange Shop: "@1"=Loja de troca: "@1"
-Owned by @1=Propriedade de @1
 
 Current stock:=Stock actual:
 You need:=Precisa:
@@ -17,7 +14,14 @@ Outgoing=Saída
 Use (E) + (Right click) for customer interface=Usar (E) + (clique direito) para a interface do cliente
 
 Cannot dig exchange shop: one or multiple stocks are in use.=Não é possível cavar loja de troca: um ou vários stocks estão em uso.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Loja de câmbio: Insira os seus bens comerciais em 'Outgoing'.
+Exchange shop: Insert your trade goods into "Outgoing".=Loja de câmbio: Insira a sua mercadoria comercial em "Saída".
+
+Update shop=Loja de actualizações
+Select item=Seleccionar item
+No item selected=Nenhum item seleccionado
+Amount:=Montante:
+Clear=Limpar
+Save=Guardar
 
 # shop_functions.lua
 One or multiple ejection fields are filled.=Um ou vários campos de ejecção são preenchidos.

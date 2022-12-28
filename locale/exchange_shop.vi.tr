@@ -2,30 +2,34 @@
 
 # shop.lua
 Exchange Shop=Cửa hàng trao đổi
-Exchange Shop:=Cửa hàng trao đổi:
-Exchange Shop: "@1"=Cửa hàng trao đổi: "@1"
-Owned by @1=Chủ sở hữu: @1
 
-Current stock:=Thành phần:
+Current stock:=Cổ phiếu hiện tại:
 You need:=Bạn cần:
-You give:=Bạn sẽ trao đi:
+You give:=Bạn cung cấp cho:
 Exchange=Trao đổi
-You get:=Bạn sẽ nhận được:
-Income=Nhận
-Outgoing=Đã bán
+You get:=Bạn lấy:
+Income=Thu nhập = earnings
+Outgoing=Hướng ngoaị
 
-Use (E) + (Right click) for customer interface=Sử dụng (E) + (nhấp chuột phải) cho giao diện máy khách
+Use (E) + (Right click) for customer interface=Sử dụng (E) + (nhấp chuột phải) cho giao diện khách hàng
 
-Cannot dig exchange shop: one or multiple stocks are in use.=Không thể đào Cửa hàng trao đổi: một hoặc nhiều ô được sử dụng.
-Exchange shop: Insert your trade goods into 'Outgoing'.=Cửa hàng trao đổi: Dán các thương phẩm của bạn vào 'Hộp thư đi'.
+Cannot dig exchange shop: one or multiple stocks are in use.=Không thể đào Cửa hàng trao đổi: Một hoặc nhiều cổ phiếu đang được sử dụng.
+Exchange shop: Insert your trade goods into "Outgoing".=Cửa hàng trao đổi: Chèn hàng hóa thương mại của bạn vào "gửi đi".
+
+Update shop=Cập nhật cửa hàng
+Select item=Chọn mục
+No item selected=Không có mục nào được chọn
+Amount:=Số lượng:
+Clear=Xa lạ
+Save=Tiết kiệm
 
 # shop_functions.lua
-One or multiple ejection fields are filled.=Một hoặc nhiều trường ngoại lệ được điền.
+One or multiple ejection fields are filled.=Một hoặc nhiều trường phóng được lấp đầy.
 Please empty them or contact the shop owner.=Vui lòng làm trống chúng hoặc liên hệ với chủ cửa hàng.
-The field '@1' can not contain multiple times the same items.=Trường '@1' không được chứa các mục giống nhau nhiều lần.
+The field '@1' can not contain multiple times the same items.=Trường '@1' không thể chứa nhiều lần các mục giống nhau.
 Please contact the shop owner.=Vui lòng liên hệ với chủ cửa hàng.
-The stock in this shop is full.=Kho trong cửa hàng này đã đầy.
-This shop is sold out.=Cửa hàng này đã được bán hết.
-You do not have enough space in your inventory.=Bạn không có đủ dung lượng trong kho của mình.
-You do not have the required items.=Bạn không có các mục cần thiết.
-Warning! Stacks are overflowing somewhere!=Chú ý! Nơi nào đó tràn kho!
+The stock in this shop is full.=Các cổ phiếu trong cửa hàng này là đầy đủ.
+This shop is sold out.=Cửa hàng này được bán hết.
+You do not have enough space in your inventory.=Bạn không có đủ không gian trong kho của bạn.
+You do not have the required items.=Bạn không có các mặt hàng cần thiết.
+Warning! Stacks are overflowing somewhere!=Cảnh báo!Ngăn xếp đang tràn ra ở đâu đó!
