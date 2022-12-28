@@ -10,7 +10,6 @@ read_globals = {
 	"mesecon",
 	"utf8",
 	"flow",
-	"compat",
 }
 
 globals = {

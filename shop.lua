@@ -11,9 +11,6 @@ local shop_positions = {}
 local tconcat = table.concat
 local lower = utf8.lower
 
-local inv_width = minetest.get_modpath("inventory") and 9 or 8
-local gui_bg = minetest.global_exists("compat") and compat.gui_bg or ""
-
 local function get_exchange_shop_formspec(mode, pos, meta)
 	local name = "nodemeta:" .. pos.x .. "," .. pos.y .. "," .. pos.z
 	meta = meta or minetest.get_meta(pos)
@@ -48,29 +45,28 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 	if mode == "customer" then
 		-- customer
 		local formspec = (
-			"size[9,8.75]" .. gui_bg ..
+			"size[9,8.75]" ..
 			"item_image[0,-0.1;1,1;".. exchange_shop.shopname .. "]" ..
 			"label[0.9,0.1;" .. S("Exchange Shop") .. "]" ..
-			"image_button_exit[8.35,-0.1;0.75,0.75;close.png;exit;;true;false;close_pressed.png]" ..
+			default.gui_close_btn() ..
 			make_slots(1, 1.1, 2, 2, "cust_ow", S("You give:")) ..
 			"button[3,3.2;3,1;exchange;" .. S("Exchange") .. "]" ..
 			make_slots(6, 1.1, 2, 2, "cust_og", S("You get:"))
 		)
 		-- Insert fallback slots
-		local inv_x = 4.5 - inv_width / 2
-		local inv_y = 4.75
+		local inv_pos = 4.75
 
 		local main_image = ""
-		for x = 1, inv_width do
+		for x = 1, 9 do
 		for y = 1, 4 do
 			main_image = main_image ..
-				"item_image[" .. x + inv_x - 1 .. "," .. y + inv_y - 1 .. ";1,1;default:cell]"
+				"item_image[" .. x - 1 .. "," .. y + inv_pos - 1 .. ";1,1;default:cell]"
 		end
 		end
 
 		formspec = formspec ..
 			main_image ..
-			"list[current_player;main;" .. inv_x .. "," .. inv_y .. ";" .. inv_width .. ",4;]"
+			"list[current_player;main;0," .. inv_pos .. ";9,4;]"
 
 			return formspec
 	end
@@ -94,10 +90,10 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 
 		-- owner
 		local formspec =
-			"formspec_version[3]size[10,10]real_coordinates[false]" .. gui_bg ..
+			"formspec_version[3]size[10,10]real_coordinates[false]" ..
 			"item_image[0,-0.1;1,1;".. exchange_shop.shopname .. "]" ..
 			"label[0.9,0.1;" .. S("Exchange Shop") .. "]" ..
-			"image_button_exit[9.3,-0.1;0.75,0.75;close.png;exit;;true;false;close_pressed.png]" ..
+			default.gui_close_btn("9.3,-0.1") ..
 			"label[5,0.4;" .. S("Current stock:") .. "]" ..
 			make_slots_btns(0.1, 2, 2, 2, "cust_ow", S("You need:")) ..
 			make_slots_btns(2.6, 2, 2, 2, "cust_og", S("You give:"))
@@ -143,11 +139,10 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 		end
 
 		local main_image = ""
-		local inv_x = 5 - inv_width / 2
-		for x = 1, inv_width do
+		for x = 1, 9 do
 		for y = 1, 4 do
 			main_image = main_image ..
-				"item_image[" .. x + inv_x - 1 .. "," .. y + 5 .. ";1,1;default:cell]"
+				"item_image[" .. x - 0.5 .. "," .. y + 5 .. ";1,1;default:cell]"
 		end
 		end
 
@@ -155,7 +150,7 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 		--	"label[1,5.4;" .. S("Use (E) + (Right click) for customer interface") .. "]" ..
 			main_image ..
 			"image[8.65,5.2;0.6,0.6;" .. arrow .. "]" ..
-			"list[current_player;main;" .. inv_x .. ",6;" .. inv_width .. ",4;]"
+			"list[current_player;main;0.5,6;9,4;]"
 
 		return formspec
 	end
@@ -250,9 +245,6 @@ local item_picker = flow.make_gui(function(player, ctx)
 	end
 
 	return gui.VBox{
-		no_prepend = true, fbgcolor = "#08080880",
-		bgimg = gui_bg ~= "" and "formspec_background9.png" or nil,
-		bgimg_middle = 20,
 		gui.HBox{
 			gui.Style{selectors = {"back"}, props = {border = false}},
 			gui.ItemImageButton{
