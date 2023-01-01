@@ -19,6 +19,7 @@ Exchange shop: Insert your trade goods into "Outgoing".=Menjalnica: Vstavite svo
 Update shop=Posodobitev trgovine
 Select item=Izberite element
 No item selected=Ni izbran noben element
+No items found=Ni najdenih elementov
 Amount:=Znesek:
 Clear=Jasno
 Save=Shrani

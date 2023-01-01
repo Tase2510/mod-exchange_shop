@@ -19,6 +19,7 @@ Exchange shop: Insert your trade goods into "Outgoing".=Takas dükkanı: Ticaret
 Update shop=Mağazayı güncelle
 Select item=Öğe seçiniz
 No item selected=Seçili öğe yok
+No items found=Hiçbir öğe bulunamadı
 Amount:=Miktar:
 Clear=Temiz
 Save=Kaydet

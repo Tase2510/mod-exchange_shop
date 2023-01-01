@@ -19,6 +19,7 @@ Exchange shop: Insert your trade goods into "Outgoing".=Výměnný obchod: Vlož
 Update shop=Aktualizace obchodu
 Select item=Vyberte položku
 No item selected=Není vybrána žádná položka
+No items found=Nebyly nalezeny žádné položky
 Amount:=Částka:
 Clear=Přehledně
 Save=Uložit

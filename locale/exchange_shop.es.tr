@@ -1,35 +1,36 @@
 # textdomain: exchange_shop
 
 # shop.lua
-Exchange Shop=Tienda de intercambio
+Exchange Shop=Tienda de cambio
 
-Current stock:=Acciones actuales:
-You need:=Lo necesitas:
-You give:=Tú das:
+Current stock:=Stock actual:
+You need:=Necesitas:
+You give:=Das:
 Exchange=Intercambio
-You get:=Lo tienes:
-Income=Ingresos
+You get:=Usted obtiene:
+Income=Ingreso
 Outgoing=Saliente
 
 Use (E) + (Right click) for customer interface=Utilice (E) + (clic derecho) para la interfaz del cliente
 
-Cannot dig exchange shop: one or multiple stocks are in use.=No se puede cavar la tienda de intercambio: una o varias existencias están en uso.
-Exchange shop: Insert your trade goods into "Outgoing".=Tienda de intercambio: Introduce tus productos de intercambio en "Salir".
+Cannot dig exchange shop: one or multiple stocks are in use.=No se puede excavar en la tienda de cambio: una o varias acciones están en uso.
+Exchange shop: Insert your trade goods into "Outgoing".=Tienda de intercambio: inserte sus bienes comerciales en "Salientes".
 
-Update shop=Actualizar la tienda
-Select item=Seleccione el artículo
-No item selected=No se ha seleccionado ningún elemento
-Amount:=Cantidad:
-Clear=Borrar
-Save=Guardar
+Update shop=Actualizar tienda
+Select item=Seleccione un artículo
+No item selected=Ningún elemento seleccionado
+No items found=No se encontraron artículos
+Amount:=Monto:
+Clear=Claro
+Save=Ahorrar
 
 # shop_functions.lua
-One or multiple ejection fields are filled.=Se rellenan uno o varios campos de expulsión.
-Please empty them or contact the shop owner.=Por favor, vacíelos o póngase en contacto con el propietario de la tienda.
+One or multiple ejection fields are filled.=Se llenan uno o varios campos de eyección.
+Please empty them or contact the shop owner.=Vacíelos o póngase en contacto con el propietario de la tienda.
 The field '@1' can not contain multiple times the same items.=El campo '@1' no puede contener varias veces los mismos elementos.
 Please contact the shop owner.=Póngase en contacto con el propietario de la tienda.
-The stock in this shop is full.=Las existencias de esta tienda están llenas.
+The stock in this shop is full.=El stock en esta tienda está completo.
 This shop is sold out.=Esta tienda está agotada.
-You do not have enough space in your inventory.=No tiene suficiente espacio en su inventario.
-You do not have the required items.=No tiene los elementos necesarios.
-Warning! Stacks are overflowing somewhere!=¡Atención! ¡Las pilas están desbordadas en alguna parte!
+You do not have enough space in your inventory.=No tienes suficiente espacio en tu inventario.
+You do not have the required items.=No tienes los elementos requeridos.
+Warning! Stacks are overflowing somewhere!=¡Advertencia! ¡Las pilas se están desbordando en alguna parte!

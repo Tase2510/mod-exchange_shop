@@ -19,6 +19,7 @@ Exchange shop: Insert your trade goods into "Outgoing".=Vaihtokauppa: Aseta kaup
 Update shop=Päivityskauppa
 Select item=Valitse kohde
 No item selected=Ei valittua kohdetta
+No items found=Ei löytynyt kohteita
 Amount:=Määrä:
 Clear=Kirkas
 Save=Tallenna

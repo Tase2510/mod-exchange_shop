@@ -19,6 +19,7 @@ Exchange shop: Insert your trade goods into "Outgoing".=Vahetuspood: Sisestage o
 Update shop=Uuenda poodi
 Select item=Valige toode
 No item selected=Ei ole valitud
+No items found=Ei leitud ühtegi toodet
 Amount:=Summa:
 Clear=Selge
 Save=Salvesta

@@ -19,6 +19,7 @@ Exchange shop: Insert your trade goods into "Outgoing".=Cserebolt: Tegye be a ke
 Update shop=Frissítés bolt
 Select item=Tétel kiválasztása
 No item selected=Nincs kiválasztott elem
+No items found=Nem találtunk tárgyakat
 Amount:=Összeg:
 Clear=Tiszta
 Save=Mentés

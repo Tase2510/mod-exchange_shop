@@ -269,7 +269,7 @@ local item_picker = flow.make_gui(function(player, ctx)
 	if #rows > 0 or #row > 0 then
 		rows[#rows + 1] = gui.HBox(row)
 	else
-		rows[#rows + 1] = gui.Label{label = S("No items found.")}
+		rows[#rows + 1] = gui.Label{label = S("No items found")}
 	end
 
 	return Window{

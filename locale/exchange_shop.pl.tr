@@ -7,29 +7,30 @@ Current stock:=Aktualne zapasy:
 You need:=Potrzebujesz:
 You give:=Dajesz:
 Exchange=Giełda
-You get:=Otrzymujesz:
+You get:=Dostajesz:
 Income=Dochód
 Outgoing=Wychodzące
 
 Use (E) + (Right click) for customer interface=Użyj (E) + (prawy przycisk myszy) dla interfejsu klienta
 
-Cannot dig exchange shop: one or multiple stocks are in use.=Nie można wykopać sklepu z wymianą: jeden lub wiele zapasów jest w użyciu.
-Exchange shop: Insert your trade goods into "Outgoing".=Sklep wymiany: Włóż swoje towary handlowe do "Wychodzące".
+Cannot dig exchange shop: one or multiple stocks are in use.=Nie można wykopać sklepu giełdowego: w użyciu jest jeden lub wiele zapasów.
+Exchange shop: Insert your trade goods into "Outgoing".=Sklep z wymianą: Wstaw swoje towary handlowe do „Wychodzące”.
 
-Update shop=Sklep z aktualizacjami
-Select item=Wybierz pozycję
-No item selected=Nie wybrano żadnej pozycji
-Amount:=Kwota:
+Update shop=Zaktualizuj sklep
+Select item=Wybierz przedmiot
+No item selected=Nie wybrano pozycji
+No items found=Nie znaleziono elementów
+Amount:=Ilość:
 Clear=Wyczyść
-Save=Zapisz
+Save=Zapisać
 
 # shop_functions.lua
-One or multiple ejection fields are filled.=Jedno lub wiele pól wyrzutowych jest wypełnionych.
-Please empty them or contact the shop owner.=Proszę je opróżnić lub skontaktować się z właścicielem sklepu.
-The field '@1' can not contain multiple times the same items.=Pole "@1" nie może zawierać wielokrotnie tych samych elementów.
+One or multiple ejection fields are filled.=Jedno lub kilka pól wyrzutowych jest wypełnionych.
+Please empty them or contact the shop owner.=Opróżnij je lub skontaktuj się z właścicielem sklepu.
+The field '@1' can not contain multiple times the same items.=Pole „@1” nie może zawierać wielokrotnie tych samych elementów.
 Please contact the shop owner.=Prosimy o kontakt z właścicielem sklepu.
-The stock in this shop is full.=Zapasy w tym sklepie są pełne.
+The stock in this shop is full.=Asortyment w tym sklepie jest pełny.
 This shop is sold out.=Ten sklep jest wyprzedany.
-You do not have enough space in your inventory.=Nie masz wystarczająco dużo miejsca w swoim magazynie.
+You do not have enough space in your inventory.=Masz za mało miejsca w ekwipunku.
 You do not have the required items.=Nie masz wymaganych elementów.
-Warning! Stacks are overflowing somewhere!=Uwaga! Stosy gdzieś się przepełniają!
+Warning! Stacks are overflowing somewhere!=Ostrzeżenie! Stosy gdzieś się przepełniają!
