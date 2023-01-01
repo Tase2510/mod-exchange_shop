@@ -209,6 +209,16 @@ if gui_bg ~= "" then
 end
 
 
+local function get_amount(ctx, change)
+	local item = ItemStack(ctx.item)
+	local amount = tonumber(ctx.form.amount)
+	if amount and amount == amount and amount + change >= 1 then
+		return math.min(amount + change, item:get_stack_max()), item
+	end
+	return 1, item
+end
+
+
 local item_picker = flow.make_gui(function(player, ctx)
 	local rows = {
 		name = "items",
@@ -300,7 +310,7 @@ local item_picker = flow.make_gui(function(player, ctx)
 				bgimg_middle = 25,
 				spacing = 0,
 				gui.Spacer{expand = false, padding = 0.06},
-				gui.Style{selectors = {"Dsearch"}, props = {border = false, bgcolor = "transparent"}},
+				gui.Style{selectors = {"Dsearch", "amount"}, props = {border = false, bgcolor = "transparent"}},
 				gui.Field{name = "Dsearch", w = 3, h = 0.7},
 				gui.ImageButton{
 					w = 0.7, h = 0.7, drawborder = false, padding = 0.05,
@@ -319,7 +329,31 @@ local item_picker = flow.make_gui(function(player, ctx)
 			},
 		},
 		gui.HBox{
-			gui.Field{name = "amount", label = S("Amount:"), default = "1"},
+			gui.VBox{
+				spacing = 0,
+				gui.Label{label = S("Amount:")},
+				gui.HBox{
+					bgimg = "inventory_search_bg9.png",
+					bgimg_middle = 25,
+					spacing = 0,
+					gui.Spacer{expand = false, padding = 0.06},
+					gui.Field{name = "amount", w = 1.8},
+				}
+			},
+			gui.Button{
+				label = "-", w = 0.8, align_v = "end", name = "dec_amount",
+				on_event = function(_, c)
+					c.form.amount = get_amount(c, -1)
+					return true
+				end,
+			},
+			gui.Button{
+				label = "+", w = 0.8, align_v = "end", name = "inc_amount",
+				on_event = function(_, c)
+					c.form.amount = get_amount(c, 1)
+					return true
+				end,
+			},
 			gui.HBox{
 				expand = true, align_h = "end", align_v = "end",
 				gui.Button{
@@ -340,11 +374,8 @@ local item_picker = flow.make_gui(function(player, ctx)
 						-- Only update the inventory if the shop has been updated
 						local meta = minetest.get_meta(c.pos)
 						if minetest.is_yes(meta:get_string("item_picker")) then
-							local item = ItemStack(c.item)
-							local amount = tonumber(c.form.amount)
-							if amount and amount == amount and amount >= 1 then
-								item:set_count(math.min(amount, item:get_stack_max()))
-							end
+							local amount, item = get_amount(c, 0)
+							item:set_count(amount)
 							shop_positions[name] = c.pos
 							meta:get_inventory():set_stack(c.list, c.idx, item)
 						end
