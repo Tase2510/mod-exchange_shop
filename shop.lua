@@ -154,7 +154,7 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 		formspec = formspec ..
 		--	"label[1,5.4;" .. S("Use (E) + (Right click) for customer interface") .. "]" ..
 			main_image ..
-			"image[8.65,5.2;0.6,0.6;" .. arrow .. "]" ..
+			"image[8.6,5.15;0.7,0.7;" .. arrow .. "]" ..
 			"list[current_player;main;" .. inv_x .. ",6;" .. inv_width .. ",4;]"
 
 		return formspec
