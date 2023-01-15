@@ -566,15 +566,6 @@ minetest.register_node(exchange_shop.shopname, {
 	end
 })
 
-minetest.register_craft({
-	output = exchange_shop.shopname,
-	recipe = {
-		{"", "default:ruby", ""},
-		{"default:gold_ingot", "default:chest", "default:gold_ingot"},
-		{"", "default:gold_ingot", ""}
-	}
-})
-
 minetest.register_on_leaveplayer(function(player)
 	shop_positions[player:get_player_name()] = nil
 end)
