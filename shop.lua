@@ -314,11 +314,7 @@ local item_picker = flow.make_gui(function(player, ctx)
 				spacing = 0,
 				gui.Spacer{expand = false, padding = 0.06},
 				gui.Style{selectors = {"Dsearch", "amount"}, props = {border = false, bgcolor = "transparent"}},
-				gui.Field{name = "Dsearch", w = 3, h = 0.7},
-				gui.ImageButton{
-					w = 0.7, h = 0.7, drawborder = false, padding = 0.05,
-					texture_name = "inventory_search.png",
-				},
+				gui.Field{name = "Dsearch", w = 3.75, h = 0.7},
 				gui.ImageButton{
 					w = 0.7, h = 0.7, drawborder = false, padding = 0.05,
 					texture_name = "inventory_search_clear.png",
