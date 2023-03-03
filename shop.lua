@@ -132,7 +132,10 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 				"button[6.25,5.25;2.4,0.5;view_stock;" .. S("Income") .. "]" ..
 				stock_image ..
 				"list[" .. name .. ";custm;5,1;5,4;]" ..
-				listring("custm"))
+				listring("custm")) ..
+				"image_button[5.25,5;1,1;exchange_shop_to_inv.png;to_inv;;" ..
+					"false;false;exchange_shop_to_inv_p.png]" ..
+				"tooltip[to_inv;" .. S("To Inventory") .. "]"
 			arrow = arrow .. "\\^\\[transformFY"
 		else
 			formspec = (formspec ..
@@ -433,6 +436,19 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 		end
 		minetest.show_formspec(player_name, "exchange_shop:shop_formspec",
 			get_exchange_shop_formspec(mode, pos, meta))
+	elseif fields.to_inv and not minetest.is_protected(pos, player_name) then
+		local shop_inv = meta:get_inventory()
+		local player_inv = sender:get_inventory()
+		local src_list, src_size = shop_inv:get_list("custm"), shop_inv:get_size("custm")
+		for raw_i = 1, src_size do
+			-- Move the first row last
+			local i = (raw_i + 8) % src_size + 1
+			local stack = src_list[i]
+			if not stack:is_empty() then
+				src_list[i] = player_inv:add_item("main", stack)
+			end
+		end
+		shop_inv:set_list("custm", src_list)
 	elseif minetest.is_yes(meta:get_string("item_picker")) and
 			not minetest.is_protected(pos, player_name) then
 		-- Item picker is enabled
