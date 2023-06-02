@@ -199,18 +199,7 @@ local function matches_search(query, description, lang)
 end
 
 local gui = flow.widgets
-local Window = gui.VBox
-if gui_bg ~= "" then
-	-- TODO: Maybe move this to the compat mod?
-	function Window(vbox)
-		vbox.no_prepend = true
-		vbox.fbgcolor = "#08080880"
-		vbox.bgimg = "formspec_background9.png"
-		vbox.bgimg_middle = 20
-		return gui.VBox(vbox)
-	end
-end
-
+local Window = minetest.global_exists("compat") and compat.Window or gui.VBox
 
 local function get_amount(ctx, change)
 	local item = ItemStack(ctx.item)
@@ -226,13 +215,7 @@ local item_picker = flow.make_gui(function(player, ctx)
 	local rows = {
 		name = "items",
 		w = 10.6, h = 5.8,
-		custom_scrollbar = {
-			w = 0.9,
-			scrollbar_bg = "inventory_creative_scrollbar_bg.png",
-			slider = "inventory_creative_slider.png",
-			arrow_up = "inventory_creative_arrow_up.png",
-			arrow_down = "inventory_creative_arrow_down.png",
-		}
+		custom_scrollbar = {w = 0.9}
 	}
 
 	local query = ctx.form.Dsearch and lower(ctx.form.Dsearch) or ""
