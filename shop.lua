@@ -94,7 +94,7 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 
 		-- owner
 		local formspec =
-			"formspec_version[3]size[10,10]real_coordinates[false]" .. gui_bg ..
+			"size[10,10]" .. gui_bg .. "real_coordinates[false]formspec_version[3]" ..
 			"item_image[0,-0.1;1,1;".. exchange_shop.shopname .. "]" ..
 			"label[0.9,0.1;" .. S("Exchange Shop") .. "]" ..
 			"image_button_exit[9.3,-0.1;0.75,0.75;close.png;exit;;true;false;close_pressed.png]" ..
