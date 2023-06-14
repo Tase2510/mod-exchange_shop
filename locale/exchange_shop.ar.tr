@@ -1,0 +1,37 @@
+# textdomain: exchange_shop
+
+# shop.lua
+Exchange Shop=محل الصرافة
+
+Current stock:=المخزون الحالي:
+You need:=انت تحتاج:
+You give:=أنت تعطي:
+Exchange=تبادل
+You get:=لقد حصلت:
+Income=دخل
+Outgoing=منفتح
+To Inventory=إلى الجرد
+
+Use (E) + (Right click) for customer interface=استخدم (E) + (انقر بزر الماوس الأيمن) لواجهة العميل
+
+Cannot dig exchange shop: one or multiple stocks are in use.=لا يمكن حفر محل الصرافة: هناك سهم واحد أو عدة أسهم قيد الاستخدام.
+Exchange shop: Insert your trade goods into "Outgoing".=متجر الصرف: أدخل البضائع التجارية الخاصة بك في "الصادرة".
+
+Update shop=متجر التحديث
+Select item=حدد البند
+No item selected=لم يتم تحديد أي عنصر
+No items found=لم يتم العثور على العناصر
+Amount:=كمية:
+Clear=واضح
+Save=يحفظ
+
+# shop_functions.lua
+One or multiple ejection fields are filled.=يتم ملء حقل طرد واحد أو أكثر.
+Please empty them or contact the shop owner.=يرجى إفراغها أو الاتصال بصاحب المحل.
+The field '@1' can not contain multiple times the same items.=لا يمكن أن يحتوي الحقل "@1" على نفس العناصر عدة مرات.
+Please contact the shop owner.=يرجى الاتصال بصاحب المحل.
+The stock in this shop is full.=المخزون في هذا المحل ممتلئ.
+This shop is sold out.=تم بيع هذا المحل.
+You do not have enough space in your inventory.=ليس لديك مساحة كافية في مخزونك.
+You do not have the required items.=ليس لديك العناصر المطلوبة.
+Warning! Stacks are overflowing somewhere!=تحذير! الأكوام تفيض في مكان ما!

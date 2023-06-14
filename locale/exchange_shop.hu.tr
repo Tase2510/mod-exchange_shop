@@ -1,12 +1,12 @@
 # textdomain: exchange_shop
 
 # shop.lua
-Exchange Shop=Exchange Shop
+Exchange Shop=Cserebolt
 
 Current stock:=Jelenlegi készlet:
 You need:=Szükséged van rá:
 You give:=Te adsz:
-Exchange=Exchange
+Exchange=Csere
 You get:=Megkapod:
 Income=Jövedelem
 Outgoing=Kimenő
