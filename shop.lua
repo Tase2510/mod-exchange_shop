@@ -25,22 +25,17 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 			"listring[current_player;main]"
 	end
 
-	local function make_slots(x, y, w, h, list, label)
-		return tconcat({
+	local function make_slots_btns(x, y, w, h, list, label, clickable)
+		local fs = {
 			("label[%f,%f;%s]"):format(x, y - 0.5, label),
 			("list[" .. name .. ";%s;%f,%f;%u,%u;]"):format(list, x, y, w, h)
-		})
-	end
-
-	local function make_slots_btns(x, y, w, h, list, label, clickable)
-		local fs = {make_slots(x, y, w, h, list, label)}
+		}
 		local i = 0
 		for y2 = 1, h do
 		for x2 = 1, w do
 			i = i + 1
-			list = clickable and (list .. "_" .. i)
 			fs[#fs + 1] = ("image_button[%s,%s;1.2,1.2;;%s;;false;false]"):format(
-				x + x2 - 1.1, y + y2 - 1.1, list or ""
+				x + x2 - 1.1, y + y2 - 1.1, clickable and (list .. "_" .. i) or ""
 			)
 		end
 		end
