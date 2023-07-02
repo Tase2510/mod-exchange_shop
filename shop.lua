@@ -10,6 +10,8 @@ local shop_positions = {}
 
 local tconcat = table.concat
 local lower = utf8.lower
+local fmt = string.format
+local esc = minetest.formspec_escape
 
 local inv_width = minetest.get_modpath("inventory") and 9 or 8
 local gui_bg = minetest.global_exists("compat") and compat.gui_bg or ""
@@ -26,17 +28,22 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 	end
 
 	local function make_slots_btns(x, y, w, h, list, label, clickable)
-		local fs = {
-			("label[%f,%f;%s]"):format(x, y - 0.5, label),
-			("list[" .. name .. ";%s;%f,%f;%u,%u;]"):format(list, x, y, w, h)
-		}
+		local inv = meta:get_inventory()
+		local fs = {fmt("label[%s,%s;%s]", x, y - 0.5, label)}
 		local i = 0
-		for y2 = 1, h do
-		for x2 = 1, w do
+		for y2 = 0, h - 1 do
+		for x2 = 0, w - 1 do
 			i = i + 1
-			fs[#fs + 1] = ("image_button[%s,%s;1.2,1.2;;%s;;false;false]"):format(
-				x + x2 - 1.1, y + y2 - 1.1, clickable and (list .. "_" .. i) or ""
-			)
+			local btn_name = list .. "_" .. i
+			if not clickable then
+				btn_name = "_" .. btn_name
+			end
+
+			fs[#fs + 1] = fmt("style[%s;bgimg=formspec_cell.png;border=false]", btn_name)
+			fs[#fs + 1] = fmt("style[%s:hovered;bgimg=formspec_cell_hovered.png]", btn_name)
+
+			local item = esc(inv:get_stack(list, i):to_string())
+			fs[#fs + 1] = fmt("item_image_button[%s,%s;1,1;%s;%s;]", x + x2, y + y2, item, btn_name)
 		end
 		end
 		return tconcat(fs)
@@ -221,7 +228,7 @@ local item_picker = flow.make_gui(function(player, ctx)
 			selectors = {"item_image_button"},
 			props = {
 				bgimg = "formspec_cell.png",
-				bgimg_hovered = "formspec_cell.png^[brighten",
+				bgimg_hovered = "formspec_cell_hovered.png",
 				border = false,
 			}
 		},
@@ -376,7 +383,7 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 			not minetest.is_protected(pos, player_name) then
 		-- Item picker is enabled
 		for field in pairs(fields) do
-			local list, idx = field:match("(cust_o[wg])_([1-4])")
+			local list, idx = field:match("^(cust_o[wg])_([1-4])$")
 			if list then
 				idx = tonumber(idx)
 				local stack = minetest.get_meta(pos):get_inventory():get_stack(list, idx)
