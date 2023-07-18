@@ -334,6 +334,14 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 		return
 	end
 
+	if fields.exit or fields.quit then
+		minetest.sound_play("default_chest_close", {
+			gain = 0.3,
+			pos = pos,
+			max_hear_distance = 10
+		}, true)
+	end
+
 	if fields.quit or minetest.get_node(pos).name ~= exchange_shop.shopname then
 		shop_positions[player_name] = nil
 		return
@@ -476,6 +484,12 @@ minetest.register_node(exchange_shop.shopname, {
 		shop_positions[player_name] = pos
 		minetest.show_formspec(player_name, "exchange_shop:shop_formspec",
 			get_exchange_shop_formspec(mode, pos, meta))
+
+		minetest.sound_play("default_chest_open", {
+			gain = 0.3,
+			pos = pos,
+			max_hear_distance = 10
+		}, true)
 	end,
 
 	allow_metadata_inventory_move = function(pos, from_list, _, to_list, _, count, player)
