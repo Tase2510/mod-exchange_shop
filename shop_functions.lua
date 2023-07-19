@@ -1,25 +1,36 @@
 local S = exchange_shop.S
+local min = math.min
 
 -- Tool wear aware replacement for contains_item.
-function exchange_shop.list_contains_item(inv, listname, stack)
-	local count = stack:get_count()
-	if count == 0 then
-		return true
+local function list_contains_items(inv, listname, stacks)
+	local list = inv:get_list(listname)
+
+	-- Convert the stacks into {item = count} and {item = wear} tables
+	-- Note that this uses the "best" tool wear if there are multiple tools for
+	-- simplicity (and you can't set wear with the item picker anyway)
+	local counts = {}
+	local wears = {}
+	for _, stack in ipairs(stacks) do
+		local name = stack:get_name()
+		counts[name] = (counts[name] or 0) + stack:get_count()
+		wears[name] = min(stack:get_wear(), wears[name] or math.huge)
 	end
 
-	local list = inv:get_list(listname)
-	local name = stack:get_name()
-	local wear = stack:get_wear()
+	-- Decrease the stored counts for every item in the list
 	for _, list_stack in ipairs(list) do
-		if list_stack:get_name() == name and
-		   list_stack:get_wear() <= wear then
-			if list_stack:get_count() >= count then
-				return true
-			else
-				count = count - list_stack:get_count()
-			end
+		local name = list_stack:get_name()
+		if counts[name] and list_stack:get_wear() <= wears[name] then
+			counts[name] = counts[name] - list_stack:get_count()
 		end
 	end
+
+	-- Return false if any count is above 0
+	for _, count in pairs(counts) do
+		if count > 0 then
+			return false
+		end
+	end
+	return true
 end
 
 -- Tool wear aware replacement for remove_item.
@@ -69,34 +80,6 @@ function exchange_shop.exchange_action(player_inv, shop_inv, pos)
 	local owner_wants = shop_inv:get_list("cust_ow")
 	local owner_gives = shop_inv:get_list("cust_og")
 
-	-- Check validness of stack "owner wants"
-	for i1, item1 in ipairs(owner_wants) do
-		local name1 = item1:get_name()
-		for i2, item2 in ipairs(owner_wants) do
-			if name1 == "" then
-				break
-			end
-			if i1 ~= i2 and name1 == item2:get_name() then
-				return S("The field '@1' can not contain multiple times the same items.",
-					S("You need")) .. " " .. S("Please contact the shop owner.")
-			end
-		end
-	end
-
-	-- Check validness of stack "owner gives"
-	for i1, item1 in ipairs(owner_gives) do
-		local name1 = item1:get_name()
-		for i2, item2 in ipairs(owner_gives) do
-			if name1 == "" then
-				break
-			end
-			if i1 ~= i2 and name1 == item2:get_name() then
-				return S("The field '@1' can not contain multiple times the same items.",
-					S("You give")) .. " " .. S("Please contact the shop owner.")
-			end
-		end
-	end
-
 	-- Check for space in the shop
 	for _, item in ipairs(owner_wants) do
 		if not shop_inv:room_for_item("custm", item) then
@@ -105,13 +88,9 @@ function exchange_shop.exchange_action(player_inv, shop_inv, pos)
 		end
 	end
 
-	local list_contains_item = exchange_shop.list_contains_item
-
 	-- Check availability of the shop's items
-	for _, item in ipairs(owner_gives) do
-		if not list_contains_item(shop_inv, "stock", item) then
-			return S("This shop is sold out.")
-		end
+	if not list_contains_items(shop_inv, "stock", owner_gives) then
+		return S("This shop is sold out.")
 	end
 
 	-- Check for space in the player's inventory
@@ -122,10 +101,8 @@ function exchange_shop.exchange_action(player_inv, shop_inv, pos)
 	end
 
 	-- Check availability of the player's items
-	for _, item in ipairs(owner_wants) do
-		if not list_contains_item(player_inv, "main", item) then
-			return S("You do not have the required items.")
-		end
+	if not list_contains_items(player_inv, "main", owner_wants) then
+		return S("You do not have the required items.")
 	end
 
 	local list_remove_item = exchange_shop.list_remove_item
