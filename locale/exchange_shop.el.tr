@@ -28,7 +28,6 @@ Save=Αποθήκευση
 # shop_functions.lua
 One or multiple ejection fields are filled.=Συμπληρώνονται ένα ή περισσότερα πεδία εκτίναξης.
 Please empty them or contact the shop owner.=Παρακαλούμε αδειάστε τα ή επικοινωνήστε με τον ιδιοκτήτη του καταστήματος.
-The field '@1' can not contain multiple times the same items.=Το πεδίο '@1' δεν μπορεί να περιέχει πολλές φορές τα ίδια στοιχεία.
 Please contact the shop owner.=Επικοινωνήστε με τον ιδιοκτήτη του καταστήματος.
 The stock in this shop is full.=Το απόθεμα σε αυτό το κατάστημα είναι πλήρες.
 This shop is sold out.=Αυτό το κατάστημα έχει εξαντληθεί.

@@ -28,7 +28,6 @@ Save=Salvați
 # shop_functions.lua
 One or multiple ejection fields are filled.=Se completează unul sau mai multe câmpuri de ejecție.
 Please empty them or contact the shop owner.=Vă rugăm să le goliți sau să contactați proprietarul magazinului.
-The field '@1' can not contain multiple times the same items.=Câmpul "@1" nu poate conține de mai multe ori aceleași elemente.
 Please contact the shop owner.=Vă rugăm să contactați proprietarul magazinului.
 The stock in this shop is full.=Stocul din acest magazin este plin.
 This shop is sold out.=Acest magazin este epuizat.

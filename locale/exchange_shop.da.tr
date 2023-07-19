@@ -28,7 +28,6 @@ Save=Gem
 # shop_functions.lua
 One or multiple ejection fields are filled.=Et eller flere udsmidningsfelter er udfyldt.
 Please empty them or contact the shop owner.=Tøm dem venligst eller kontakt butiksejeren.
-The field '@1' can not contain multiple times the same items.=Feltet "@1" kan ikke indeholde flere gange de samme elementer.
 Please contact the shop owner.=Kontakt venligst butiksejeren.
 The stock in this shop is full.=Lageret i denne butik er fyldt op.
 This shop is sold out.=Denne butik er udsolgt.

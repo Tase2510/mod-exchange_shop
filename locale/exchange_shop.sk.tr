@@ -28,7 +28,6 @@ Save=Uložiť
 # shop_functions.lua
 One or multiple ejection fields are filled.=Vyplní sa jedno alebo viacero vysúvacích polí.
 Please empty them or contact the shop owner.=Vyprázdnite ich alebo kontaktujte majiteľa obchodu.
-The field '@1' can not contain multiple times the same items.=Pole "@1" nemôže obsahovať viackrát rovnaké položky.
 Please contact the shop owner.=Obráťte sa na majiteľa obchodu.
 The stock in this shop is full.=Zásoby v tomto obchode sú plné.
 This shop is sold out.=Tento obchod je vypredaný.

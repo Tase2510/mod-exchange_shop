@@ -28,7 +28,6 @@ Save=Зберегти
 # shop_functions.lua
 One or multiple ejection fields are filled.=Одне або кілька полів викиду заповнені.
 Please empty them or contact the shop owner.=Будь ласка, спустошіть їх або зв'яжіться з власником магазину.
-The field '@1' can not contain multiple times the same items.=Поле '@1' не може містити кілька разів одні й ті самі предмети.
 Please contact the shop owner.=Будь ласка, зв'яжіться з власником магазину.
 The stock in this shop is full.=Склад у цьому магазині повний.
 This shop is sold out.=Цей магазин розпродано.

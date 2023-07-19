@@ -28,7 +28,6 @@ Save=Tiết kiệm
 # shop_functions.lua
 One or multiple ejection fields are filled.=Một hoặc nhiều trường đẩy được lấp đầy.
 Please empty them or contact the shop owner.=Vui lòng làm trống chúng hoặc liên hệ với chủ cửa hàng.
-The field '@1' can not contain multiple times the same items.=Trường '@1' không được chứa nhiều mục giống nhau.
 Please contact the shop owner.=Vui lòng liên hệ với chủ cửa hàng.
 The stock in this shop is full.=Các cổ phiếu trong cửa hàng này là đầy đủ.
 This shop is sold out.=Cửa hàng này đã bán hết.

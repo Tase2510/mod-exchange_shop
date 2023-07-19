@@ -28,7 +28,6 @@ Save=يحفظ
 # shop_functions.lua
 One or multiple ejection fields are filled.=يتم ملء حقل طرد واحد أو أكثر.
 Please empty them or contact the shop owner.=يرجى إفراغها أو الاتصال بصاحب المحل.
-The field '@1' can not contain multiple times the same items.=لا يمكن أن يحتوي الحقل "@1" على نفس العناصر عدة مرات.
 Please contact the shop owner.=يرجى الاتصال بصاحب المحل.
 The stock in this shop is full.=المخزون في هذا المحل ممتلئ.
 This shop is sold out.=تم بيع هذا المحل.

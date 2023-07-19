@@ -28,7 +28,6 @@ Save=Kaydet
 # shop_functions.lua
 One or multiple ejection fields are filled.=Bir veya birden fazla fırlatma alanı doldurulur.
 Please empty them or contact the shop owner.=Lütfen bunları boşaltın veya mağaza sahibiyle iletişime geçin.
-The field '@1' can not contain multiple times the same items.='@1' alanı aynı öğeleri birden fazla kez içeremez.
 Please contact the shop owner.=Lütfen mağaza sahibiyle iletişime geçin.
 The stock in this shop is full.=Bu dükkandaki stok dolu.
 This shop is sold out.=Bu dükkan tükendi.

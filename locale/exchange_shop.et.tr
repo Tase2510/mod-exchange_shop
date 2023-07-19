@@ -28,7 +28,6 @@ Save=Salvesta
 # shop_functions.lua
 One or multiple ejection fields are filled.=Täidetud on üks või mitu väljaviskevälja.
 Please empty them or contact the shop owner.=Palun tühjendage need või võtke ühendust poe omanikuga.
-The field '@1' can not contain multiple times the same items.=Väli '@1' ei saa sisaldada mitu korda samu elemente.
 Please contact the shop owner.=Palun võtke ühendust poe omanikuga.
 The stock in this shop is full.=Selle poe varud on täis.
 This shop is sold out.=See pood on välja müüdud.

@@ -28,7 +28,6 @@ Save=Išsaugoti
 # shop_functions.lua
 One or multiple ejection fields are filled.=Užpildomas vienas arba keli išmetimo laukai.
 Please empty them or contact the shop owner.=Ištuštinkite juos arba susisiekite su parduotuvės savininku.
-The field '@1' can not contain multiple times the same items.=Lauke "@1" negali būti tų pačių elementų kelis kartus.
 Please contact the shop owner.=Kreipkitės į parduotuvės savininką.
 The stock in this shop is full.=Šios parduotuvės atsargos yra pilnos.
 This shop is sold out.=Ši parduotuvė išparduota.

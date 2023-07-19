@@ -28,7 +28,6 @@ Save=Saglabāt
 # shop_functions.lua
 One or multiple ejection fields are filled.=Ir aizpildīts viens vai vairāki izmešanas lauki.
 Please empty them or contact the shop owner.=Lūdzu, iztukšojiet tos vai sazinieties ar veikala īpašnieku.
-The field '@1' can not contain multiple times the same items.=Laukā "@1" nevar būt vairākas reizes vieni un tie paši elementi.
 Please contact the shop owner.=Lūdzu, sazinieties ar veikala īpašnieku.
 The stock in this shop is full.=Krājumi šajā veikalā ir pilni.
 This shop is sold out.=Šis veikals ir izpārdots.

@@ -28,7 +28,6 @@ Save=Salva
 # shop_functions.lua
 One or multiple ejection fields are filled.=Vengono compilati uno o più campi di espulsione.
 Please empty them or contact the shop owner.=Si prega di svuotarli o contattare il proprietario del negozio.
-The field '@1' can not contain multiple times the same items.=Il campo '@1' non può contenere più volte gli stessi elementi.
 Please contact the shop owner.=Si prega di contattare il proprietario del negozio.
 The stock in this shop is full.=Lo stock in questo negozio è pieno.
 This shop is sold out.=Questo negozio è esaurito.

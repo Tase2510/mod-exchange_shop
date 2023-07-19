@@ -28,7 +28,6 @@ Save=Simpan
 # shop_functions.lua
 One or multiple ejection fields are filled.=Satu atau beberapa bidang ejeksi diisi.
 Please empty them or contact the shop owner.=Silakan kosongkan atau hubungi pemilik toko.
-The field '@1' can not contain multiple times the same items.=Bidang '@1' tidak bisa berisi beberapa kali item yang sama.
 Please contact the shop owner.=Silakan hubungi pemilik toko.
 The stock in this shop is full.=Stok di toko ini sudah penuh.
 This shop is sold out.=Toko ini sudah terjual habis.

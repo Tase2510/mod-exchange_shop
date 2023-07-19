@@ -28,7 +28,6 @@ Save=Shrani
 # shop_functions.lua
 One or multiple ejection fields are filled.=Zapolnjeno je eno ali več polj za izmet.
 Please empty them or contact the shop owner.=Izpraznite jih ali se obrnite na lastnika trgovine.
-The field '@1' can not contain multiple times the same items.=Polje "@1" ne more večkrat vsebovati istih elementov.
 Please contact the shop owner.=Obrnite se na lastnika trgovine.
 The stock in this shop is full.=Zaloga v tej trgovini je polna.
 This shop is sold out.=Ta trgovina je razprodana.

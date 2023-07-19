@@ -28,7 +28,6 @@ Save=Spara
 # shop_functions.lua
 One or multiple ejection fields are filled.=Ett eller flera utkastningsfält är fyllda.
 Please empty them or contact the shop owner.=Töm dem eller kontakta butiksägaren.
-The field '@1' can not contain multiple times the same items.=Fältet "@1" kan inte innehålla samma objekt flera gånger.
 Please contact the shop owner.=Kontakta butiksägaren.
 The stock in this shop is full.=Lageret i butiken är fullt.
 This shop is sold out.=Den här butiken är slutsåld.
