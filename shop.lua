@@ -18,7 +18,7 @@ local gui_bg = minetest.global_exists("compat") and compat.gui_bg or ""
 
 local CUSTOMER, OWNER_CUSTM, OWNER_STOCK = "customer", "owner_custm", "owner_stock"
 
-local function get_exchange_shop_formspec(mode, pos, meta)
+local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
 	local name = "nodemeta:" .. pos.x .. "," .. pos.y .. "," .. pos.z
 	meta = meta or minetest.get_meta(pos)
 
@@ -51,7 +51,7 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 
 	if mode == CUSTOMER then
 		-- customer
-		return tconcat({
+		local fs = {
 			"size[9,8.75]", gui_bg, "real_coordinates[false]formspec_version[3]",
 			"item_image[0,-0.1;1,1;", exchange_shop.shopname, "]",
 			"label[0.9,0.1;", S("Exchange Shop"), "]",
@@ -60,7 +60,11 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 			"button[3,3.2;3,1;exchange;", S("Exchange"), "]",
 			make_slots_btns(6, 1.1, 2, 2, "cust_og", S("You get:")),
 			("list[current_player;main;%s,4.75;%s,4;]"):format((4.5 - inv_width / 2), inv_width)
-		})
+		}
+		if err_msg then
+			fs[#fs + 1] = ("label[0,4.1;%s]"):format(esc(err_msg))
+		end
+		return tconcat(fs)
 	end
 
 	if mode == OWNER_CUSTM or mode == OWNER_STOCK then
@@ -110,6 +114,10 @@ local function get_exchange_shop_formspec(mode, pos, meta)
 		--	"label[1,5.4;" .. S("Use (E) + (Right click) for customer interface") .. "]" ..
 			"image[8.6,5.15;0.7,0.7;" .. arrow .. "]" ..
 			"list[current_player;main;" .. inv_x .. ",6;" .. inv_width .. ",4;]"
+
+		if err_msg then
+			formspec = formspec .. ("textarea[0.4,4;4.5,2;;;%s]"):format(esc(err_msg))
+		end
 
 		return formspec
 	end
@@ -356,15 +364,11 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 			return
 		end
 
-		local err_msg, resend = exchange_shop.exchange_action(player_inv, shop_inv, pos)
+		local err_msg = exchange_shop.exchange_action(player_inv, shop_inv, pos)
 		-- Throw error message
 		if err_msg then
-			minetest.chat_send_player(player_name, minetest.colorize("red",
-				S("Exchange Shop") .. ": " .. err_msg))
-		end
-		if resend then
 			minetest.show_formspec(player_name, "exchange_shop:shop_formspec",
-				get_exchange_shop_formspec(CUSTOMER, pos, meta))
+				get_exchange_shop_formspec(CUSTOMER, pos, meta, err_msg))
 		end
 	elseif (fields.view_custm or fields.view_stock)
 			and not minetest.is_protected(pos, player_name) then
@@ -504,14 +508,15 @@ minetest.register_node(exchange_shop.shopname, {
 	allow_metadata_inventory_put = function(pos, listname, _, stack, player)
 		local player_name = player:get_player_name()
 
-		if listname == "custm" then
-			minetest.chat_send_player(player_name,
-				S("Exchange shop: Insert your trade goods into \"Outgoing\"."))
-			return 0
-		end
-		if not minetest.is_protected(pos, player_name)
-				and listname ~= "custm_ej" and listname:sub(1, 6) ~= "cust_o" then
-			return stack:get_count()
+		if not minetest.is_protected(pos, player_name) then
+			if listname == "custm" then
+				local err_msg = S("Exchange shop: Insert your trade goods into \"Outgoing\".")
+				minetest.show_formspec(player_name, "exchange_shop:shop_formspec",
+					get_exchange_shop_formspec(OWNER_CUSTM, pos, nil, err_msg))
+				return 0
+			elseif listname ~= "custm_ej" and listname:sub(1, 6) ~= "cust_o" then
+				return stack:get_count()
+			end
 		end
 		return 0
 	end,
