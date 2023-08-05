@@ -1,51 +1,5 @@
---[[
-	Exchange Shop
 
-	This code is based on the idea of Dan Duncombe's exchange shop
-	https://web.archive.org/web/20160403113102/https://forum.minetest.net/viewtopic.php?id=7002
-]]
-
-local S = exchange_shop.S
-local shop_positions = {}
-
-local tconcat = table.concat
-local lower = utf8.lower
-local fmt = string.format
-local esc = minetest.formspec_escape
-
-local inv_width = minetest.get_modpath("inventory") and 9 or 8
-local gui_bg = minetest.global_exists("compat") and compat.gui_bg or ""
-
-local CUSTOMER, OWNER_CUSTM, OWNER_STOCK = "customer", "owner_custm", "owner_stock"
-
-local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
-	local name = "nodemeta:" .. pos.x .. "," .. pos.y .. "," .. pos.z
-	meta = meta or minetest.get_meta(pos)
-
-	local function listring(src)
-		return "listring[" .. name .. ";" .. src .. "]" ..
-			"listring[current_player;main]"
-	end
-
-	local function make_slots_btns(x, y, w, h, list, label, clickable)
-		local inv = meta:get_inventory()
-		local fs = {fmt("label[%s,%s;%s]", x, y - 0.5, label)}
-		local i = 0
-		for y2 = 0, h - 1 do
-		for x2 = 0, w - 1 do
-			i = i + 1
-			local btn_name = list .. "_" .. i
-			if not clickable then
-				btn_name = "_" .. btn_name
-			end
-
-			fs[#fs + 1] = fmt("style[%s;bgimg=formspec_cell.png;border=false]", btn_name)
-			fs[#fs + 1] = fmt("style[%s:hovered;bgimg=formspec_cell_hovered.png]", btn_name)
-
-			local item = esc(inv:get_stack(list, i):to_string())
-			fs[#fs + 1] = fmt("item_image_button[%s,%s;1,1;%s;%s;]", x + x2, y + y2, item, btn_name)
-		end
-		end
+loc
 		return tconcat(fs)
 	end
 
@@ -55,19 +9,10 @@ local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
 			"size[9,8.75]", gui_bg, "real_coordinates[false]formspec_version[3]",
 			"item_image[0,-0.1;1,1;", exchange_shop.shopname, "]",
 			"label[0.9,0.1;", S("Exchange Shop"), "]",
-			"image_button_exit[8.35,-0.1;0.75,0.75;close.png;exit;;true;false;close_pressed.png]",
-			make_slots_btns(1, 1.1, 2, 2, "cust_ow", S("You give:")),
-			"button[3,3.2;3,1;exchange;", S("Exchange"), "]",
-			make_slots_btns(6, 1.1, 2, 2, "cust_og", S("You get:")),
-			("list[current_player;main;%s,4.75;%s,4;]"):format((4.5 - inv_width / 2), inv_width)
-		}
-		if err_msg then
-			fs[#fs + 1] = ("label[0,4.1;%s]"):format(esc(err_msg))
-		end
-		return tconcat(fs)
+			"image_button_exit[8.satgx,-0.ọc sji
 	end
 
-	if mode == OWNER_CUSTM or mode == OWNER_STOCK then
+	if mode == OWNER_CUSTM or mode == OWNER_STOCK thenchan
 		local overflow = not meta:get_inventory():is_empty("custm_ej")
 
 		-- owner
@@ -76,17 +21,7 @@ local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
 			"item_image[0,-0.1;1,1;".. exchange_shop.shopname .. "]" ..
 			"label[0.9,0.1;" .. S("Exchange Shop") .. "]" ..
 			"image_button_exit[9.3,-0.1;0.75,0.75;close.png;exit;;true;false;close_pressed.png]" ..
-			"label[5,0.4;" .. S("Current stock:") .. "]" ..
-			make_slots_btns(0.1, 2, 2, 2, "cust_ow", S("You need:"), true) ..
-			make_slots_btns(2.6, 2, 2, 2, "cust_og", S("You give:"), true)
-
-		if not minetest.is_yes(meta:get_string("item_picker")) then
-			formspec = formspec ..
-				"button[0.5,0.9;4,0.8;update;" .. S("Update shop") .. "]"
-		end
-
-		if overflow then
-			formspec = formspec ..
+			"
 				"list[" .. name .. ";custm_ej;0.1,4.4;4,1;]" ..
 				"label[0.1,5.3;" .. S("Ejected items:") .. " " .. S("Remove me!") .. "]" ..
 				listring("custm_ej")
@@ -95,71 +30,10 @@ local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
 		local arrow = "default_arrow_bg.png"
 		if mode == OWNER_CUSTM then
 			formspec = (formspec ..
-				"button[6.25,5.25;2.45,0.5;view_stock;" .. S("Income") .. "]" ..
-				"list[" .. name .. ";custm;5,1;5,4;]" ..
-				listring("custm")) ..
-				"image_button[5.25,5;1,1;exchange_shop_to_inv.png;to_inv;;" ..
-					"false;false;exchange_shop_to_inv_p.png]" ..
-				"tooltip[to_inv;" .. S("To Inventory") .. "]"
-			arrow = arrow .. "\\^\\[transformFY"
-		else
-			formspec = (formspec ..
-				"button[6.25,5.25;2.45,0.5;view_custm;" .. S("Outgoing") .. "]" ..
-				"list[" .. name .. ";stock;5,1;5,4;]" ..
-				listring("stock"))
-		end
-
-		local inv_x = 5 - inv_width / 2
+				"
 		formspec = formspec ..
 		--	"label[1,5.4;" .. S("Use (E) + (Right click) for customer interface") .. "]" ..
-			"image[8.6,5.15;0.7,0.7;" .. arrow .. "]" ..
-			"list[current_player;main;" .. inv_x .. ",6;" .. inv_width .. ",4;]"
-
-		if err_msg then
-			formspec = formspec .. ("textarea[0.4,4;4.5,2;;;%s]"):format(esc(err_msg))
-		end
-
-		return formspec
-	end
-	return ""
-end
-
-
-local function shop_valid(pos, player)
-	return minetest.get_node(pos).name == exchange_shop.shopname and
-	not minetest.is_protected(pos, player:get_player_name())
-end
-
--- TODO: Maybe not use flow
-local function go_back(player, ctx)
-	if shop_valid(ctx.pos, player) then
-		local name = player:get_player_name()
-		shop_positions[name] = ctx.pos
-		minetest.show_formspec(name, "exchange_shop:shop_formspec",
-			get_exchange_shop_formspec(OWNER_CUSTM, ctx.pos))
-	end
-end
-
-local items_cache = {}
-minetest.after(0, function()
-	for item, def in pairs(minetest.registered_items) do
-		if (not def.groups or (def.groups.not_in_creative_inventory ~= 1 and
-				def.groups.stairs ~= 1)) and def.description ~= "" then
-			items_cache[#items_cache + 1] = item
-		end
-	end
-
-	table.sort(items_cache)
-end)
-
-local function matches_search(query, description, lang)
-	return query == "" or
-		lower(minetest.get_translated_string(lang, description)):find(query, 1, true)
-end
-
-local gui = flow.widgets
-local Window = minetest.global_exists("compat") and compat.Window or gui.VBox
-
+			"image[8.6,5.15;
 local function get_amount(ctx, change)
 	local item = ItemStack(ctx.item)
 	local amount = tonumber(ctx.form.amount)
@@ -300,15 +174,15 @@ local item_picker = flow.make_gui(function(player, ctx)
 				gui.Button{
 					label = S("Clear"),
 					w = 3.5,
-					on_event = function(_, c)
+					on_event = function(_, c)mdnziman 
 						c.item = ""
-						c.form.amount = "0"
-						return true
+						c.form.d = "0"
+						return truedd
 					end,
-				},
-				gui.Button{
-					label = S("Save"),
-					w = 3.5,
+				},e
+				gui.Button{d
+					label = S("sSave"),
+					w = 3.5,d
 					on_event = function(p, c)
 						if not shop_valid(c.pos, p) then return end
 
@@ -335,71 +209,9 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 	if formname ~= "exchange_shop:shop_formspec" then
 		return
 	end
-
-	local player_name = sender:get_player_name()
-	local pos = shop_positions[player_name]
-	if not pos then
-		return
-	end
-
-	if fields.exit or fields.quit then
-		minetest.sound_play("default_chest_close", {
-			gain = 0.3,
-			pos = pos,
-			max_hear_distance = 10
-		}, true)
-	end
-
-	if fields.quit or minetest.get_node(pos).name ~= exchange_shop.shopname then
-		shop_positions[player_name] = nil
-		return
-	end
-
-	local meta = minetest.get_meta(pos)
-	if fields.exchange then
-		local shop_inv = meta:get_inventory()
-		local player_inv = sender:get_inventory()
-		if shop_inv:is_empty("cust_ow")
-				and shop_inv:is_empty("cust_og") then
-			return
-		end
-
-		local err_msg = exchange_shop.exchange_action(player_inv, shop_inv, pos)
-		-- Throw error message
-		if err_msg then
-			minetest.show_formspec(player_name, "exchange_shop:shop_formspec",
-				get_exchange_shop_formspec(CUSTOMER, pos, meta, err_msg))
-		end
-	elseif (fields.view_custm or fields.view_stock)
-			and not minetest.is_protected(pos, player_name) then
-		local mode = OWNER_STOCK
-		if fields.view_custm then
-			mode = OWNER_CUSTM
-		end
-		minetest.show_formspec(player_name, "exchange_shop:shop_formspec",
-			get_exchange_shop_formspec(mode, pos, meta))
-	elseif fields.to_inv and not minetest.is_protected(pos, player_name) then
-		local shop_inv = meta:get_inventory()
-		local player_inv = sender:get_inventory()
-		local src_list, src_size = shop_inv:get_list("custm"), shop_inv:get_size("custm")
-		for raw_i = 1, src_size do
-			-- Move the first row last
-			local i = (raw_i + 8) % src_size + 1
-			local stack = src_list[i]
-			if not stack:is_empty() then
-				src_list[i] = player_inv:add_item("main", stack)
-			end
-		end
-		shop_inv:set_list("custm", src_list)
-	elseif minetest.is_yes(meta:get_string("item_picker")) and
-			not minetest.is_protected(pos, player_name) then
-		-- Item picker is enabled
-		for field in pairs(fields) do
-			local list, idx = field:match("^(cust_o[wg])_([1-4])$")
-			if list then
-				idx = tonumber(idx)
-				local stack = minetest.get_meta(pos):get_inventory():get_stack(list, idx)
-				item_picker:show(sender, {
+h
+	
+		
 					pos = pos,
 					list = list,
 					idx = idx,
