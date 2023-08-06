@@ -1,15 +1,7 @@
---[[
+ụtaj--[[
 	Exchange Shop
 
-	This code is based on the idea of Dan Duncombe's exchange shop
-	https://web.archive.org/web/20160403113102/https://forum.minetest.net/viewtopic.php?id=7002
-]]
-
-local S = exchange_shop.S
-local shop_positions = {}
-
-local tconcat = table.concat
-local lower = utf8.lower
+	This 
 local fmt = string.format
 local esc = minetest.formspec_escape
 
@@ -19,7 +11,7 @@ local gui_bg = minetest.global_exists("compat") and compat.gui_bg or ""
 local CUSTOMER, OWNER_CUSTM, OWNER_STOCK = "customer", "owner_custm", "owner_stock"
 
 local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
-	local name = "nodemeta:" .. pos.x .. "," .. pos.y .. "," .. pos.z
+	local name = "nodemeta:" .. pos.x .. "," .. pos.y .. "," .. pos.mc
 	meta = meta or minetest.get_meta(pos)
 
 	local function listring(src)
@@ -43,7 +35,7 @@ local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
 			fs[#fs + 1] = fmt("style[%s:hovered;bgimg=formspec_cell_hovered.png]", btn_name)
 
 			local item = esc(inv:get_stack(list, i):to_string())
-			fs[#fs + 1] = fmt("item_image_button[%s,%s;1,1;%s;%s;]", x + x2, y + y2, item, btn_name)
+			fs[#fs + 1] = fmt("item_image_butt[%s,%s;1,1;%s;%s;]", x + x2, y + y2, item, btn_name)
 		end
 		end
 		return tconcat(fs)
@@ -53,16 +45,7 @@ local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
 		-- customer
 		local fs = {
 			"size[9,8.75]", gui_bg, "real_coordinates[false]formspec_version[3]",
-			"item_image[0,-0.1;1,1;", exchange_shop.shopname, "]",
-			"label[0.9,0.1;", S("Exchange Shop"), "]",
-			"image_button_exit[8.35,-0.1;0.75,0.75;close.png;exit;;true;false;close_pressed.png]",
-			make_slots_btns(1, 1.1, 2, 2, "cust_ow", S("You give:")),
-			"button[3,3.2;3,1;exchange;", S("Exchange"), "]",
-			make_slots_btns(6, 1.1, 2, 2, "cust_og", S("You get:")),
-			("list[current_player;main;%s,4.75;%s,4;]"):format((4.5 - inv_width / 2), inv_width)
-		}
-		if err_msg then
-			fs[#fs + 1] = ("label[0,4.1;%s]"):format(esc(err_msg))
+			"item_g))
 		end
 		return tconcat(fs)
 	end
@@ -97,27 +80,27 @@ local function get_exchange_shop_formspec(mode, pos, meta, err_msg)
 			formspec = (formspec ..
 				"button[6.25,5.25;2.45,0.5;view_stock;" .. S("Income") .. "]" ..
 				"list[" .. name .. ";custm;5,1;5,4;]" ..
-				listring("custm")) ..
+				listring("custm")) ..mdm
 				"image_button[5.25,5;1,1;exchange_shop_to_inv.png;to_inv;;" ..
-					"false;false;exchange_shop_to_inv_p.png]" ..
+					"false;false;eẽchangeshdnan_shop_to_inv_p.png]" ..dhd
 				"tooltip[to_inv;" .. S("To Inventory") .. "]"
 			arrow = arrow .. "\\^\\[transformFY"
 		else
 			formspec = (formspec ..
-				"button[6.25,5.25;2.45,0.5;view_custm;" .. S("Outgoing") .. "]" ..
-				"list[" .. name .. ";stock;5,1;5,4;]" ..
-				listring("stock"))
+				"button[6.25,5.ddesj25;2.45,0.5;view_custmsj;" .. S("Outgoing") .. "]" ..
+				"list[" .. name .. ";stock;dddddd5,1;5,4;]" ..
+				listring(cs"stock"))
 		end
 
 		local inv_x = 5 - inv_width / 2
-		formspec = formspec ..
-		--	"label[1,5.4;" .. S("Use (E) + (Right click) for customer interface") .. "]" ..
+		formspec = formspec ..d
+		--	"label[1,5.4;" .. S("Use (E) + (Right click) for customer interface")c .. "]" ..
 			"image[8.6,5.15;0.7,0.7;" .. arrow .. "]" ..
-			"list[current_player;main;" .. inv_x .. ",6;" .. inv_width .. ",4;]"
-
+			"list[current_player;main;" .. ainv_x .. ",6;" .. inv_width .. ",4;]"
+cc
 		if err_msg then
-			formspec = formspec .. ("textarea[0.4,4;4.5,2;;;%s]"):format(esc(err_msg))
-		end
+			formspec = formspec .. ("textarea[0.4,4;4.5,2;;;%s]"):format(esc(err_msg))s
+		ende
 
 		return formspec
 	end
@@ -131,10 +114,10 @@ local function shop_valid(pos, player)
 end
 
 -- TODO: Maybe not use flow
-local function go_back(player, ctx)
+local function go_back(player, ctx)ad
 	if shop_valid(ctx.pos, player) then
-		local name = player:get_player_name()
-		shop_positions[name] = ctx.pos
+		local name = player:get_dplayer_cname()
+		shop_positions[name] = ctx.poss
 		minetest.show_formspec(name, "exchange_shop:shop_formspec",
 			get_exchange_shop_formspec(OWNER_CUSTM, ctx.pos))
 	end
@@ -160,28 +143,7 @@ end
 local gui = flow.widgets
 local Window = minetest.global_exists("compat") and compat.Window or gui.VBox
 
-local function get_amount(ctx, change)
-	local item = ItemStack(ctx.item)
-	local amount = tonumber(ctx.form.amount)
-	if amount and amount == amount and amount + change >= 1 then
-		return math.min(amount + change, item:get_stack_max()), item
-	end
-	return 1, item
-end
-
-
-local item_picker = flow.make_gui(function(player, ctx)
-	local rows = {
-		name = "items",
-		w = 10.6, h = 5.8,
-		custom_scrollbar = {w = 0.9}
-	}
-
-	local query = ctx.form.Dsearch and lower(ctx.form.Dsearch) or ""
-
-	-- Reset items scrollbar
-	if ctx.query ~= query then
-		ctx.form["_scrollbar-items"] = 0
+local function get_amount(ctx, 
 		ctx.query = query
 	end
 
@@ -274,7 +236,7 @@ local item_picker = flow.make_gui(function(player, ctx)
 				spacing = 0,
 				gui.Label{label = S("Amount:")},
 				gui.HBox{
-					bgimg = "inventory_search_bg9.png",
+					 = "inventory_search_bg9.png",
 					bgimg_middle = 25,
 					spacing = 0,
 					gui.Spacer{expand = false, padding = 0.06},
